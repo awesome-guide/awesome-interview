@@ -15,7 +15,7 @@
 
 
 
-![](images/west-indian-manatee-two.jpg)
+![](https://www.natgeomedia.com/wp-content/uploads/2015/06/west-indian-manatee-two.jpg.adapt_.945.1.jpg)
 
 
 
