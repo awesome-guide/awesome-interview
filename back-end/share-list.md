@@ -11,27 +11,36 @@
 #### Java基础
 
 1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？
-2. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？
-3.  synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
-4.  hashmap 和 hashtable 的区别是什么？
-5. HashMap 实现原理，为什么使用红黑树？
-6. 简述 Java的反射机制
-7. Java 线程间有多少通信方式？
-8. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
-9. Java 类的加载流程是怎样的？什么是双亲委派机制？
-10. 简述常见的工厂模式以及单例模式的使用场景
-11. JVM 中内存模型是怎样的，简述新生代与老年代的区别？
-12. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
-13. ThreadLocal 实现原理是什么？
-14. 简述 Spring 的初始化流程
-15. 简述生产者消费者模型
-16. Java 如何高效进行数组拷贝
-17. CAS 实现原理是什么？
-18. 成员变量和方法的区别？
-19. JVM 是怎么去调优的？简述过程和调优的结果
-20. Java 缓冲流 buffer 的用途和原理是什么？
-21. 简述 BIO, NIO, AIO 的区别
-22.  简述 Java 的 happen before 原则
+2. HashMap底层实现，为什么扩容是2的幂次；
+3. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？
+4. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
+5. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；
+6. CAS原理，ABA问题；
+7. ReentranLock与sychronized的区别
+8. hashmap 和 hashtable 的区别是什么？
+9. HashMap 实现原理，为什么使用红黑树？
+10. 简述 Java的反射机制
+11. Java 线程间有多少通信方式？
+12. Java线程的状态及转换
+13. Java创建线程的方式
+14. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
+15. volitile的内存语义，底层如何实现，为什么不能保证原子性
+16. Java 类的加载流程是怎样的？什么是双亲委派机制？
+17. 简述常见的工厂模式以及单例模式的使用场景
+18. JVM 中内存模型是怎样的，简述新生代与老年代的区别？新生代有哪些区，作用是什么？
+19. 如何判断对象是否可以被回收（1引用计数2可达性分析）
+20. JVM常用垃圾回收算法，讲一下CMS原理
+21. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
+22. ThreadLocal 实现原理是什么？
+23. 简述 Spring 的初始化流程
+24. 简述生产者消费者模型
+25. Java 如何高效进行数组拷贝
+26. CAS 实现原理是什么？
+27. 成员变量和方法的区别？
+28. JVM 是怎么去调优的？简述过程和调优的结果
+29. Java 缓冲流 buffer 的用途和原理是什么？
+30. 简述 BIO, NIO, AIO 的区别
+31. 简述 Java 的 happen before 原则
 
 
 
@@ -57,12 +66,21 @@
 - ▲ 4 简述常见的负载均衡算法
 - ▲ 1 反转链表 (Leetcode)
 - ▲ 1 第一个只出现一次的字符 (Leetcode)
+-  顺时针打印矩阵
+
+#### 计算机基础
+
+- Thread.sleep(0) 到底有什么用？
+
+- 操作系统，进程、线程和协程的区别
+- 进程间通信方式有哪些
 
 
 
 #### 网络协议
 
-- 简述 TCP 三次握手以及四次挥手的流程。为什么需要三次握手以及四次挥手？
+- 简述 TCP 三次握手以及四次挥手的流程。为什么需要三次握手以及四次挥手？TCP四次挥手说一下，为什么要等待2MSL，第二次和第三次挥手是否可以合并（可以）。
+- TCP3次握手过程，第三次是否可以携带数据，如何避免SYN攻击（syncookies）
 -  RestFul 与 RPC 的区别是什么？RestFul 的优点在哪里？
 -  HTTP 与 HTTPS 有哪些区别？
 -  RestFul 是什么？RestFul 请求的 URL 有什么特点？
@@ -83,7 +101,7 @@
 
 
 
-### 高并发相关
+### 中间件相关
 
 #### MQ
 
@@ -101,6 +119,7 @@
 2. [ES 写入数据的工作原理是什么啊？ES 查询数据的工作原理是什么啊？底层的 Lucene 介绍一下呗？倒排索引了解吗？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-write-query-search.md)
 3. [ES 在数据量很大的情况下（数十亿级别）如何提高查询效率啊？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-optimizing-query-performance.md)
 4. [ES 生产集群的部署架构是什么？每个索引的数据量大概有多少？每个索引大概有多少个分片？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-production-cluster.md)
+5. 倒排索引与正排索引的区别
 
 #### 缓存
 
@@ -116,17 +135,10 @@
 10. [如何保证缓存与数据库的双写一致性？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-consistence.md)
 11. [Redis 的并发竞争问题是什么？如何解决这个问题？了解 Redis 事务的 CAS 方案吗？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-cas.md)
 12. [生产环境中的 Redis 是怎么部署的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-production-environment.md)
+13. Redis常用数据结构
+14. 如何用Redis实现分布式锁，可能遇到的问题和解决办法
 
-#### 分库分表
-
-- [为什么要分库分表（设计高并发系统的时候，数据库层面该如何设计）？用过哪些分库分表中间件？不同的分库分表中间件都有什么优点和缺点？你们具体是如何对数据库如何进行垂直拆分或水平拆分的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard.md)
-- [现在有一个未分库分表的系统，未来要分库分表，如何设计才可以让系统从未分库分表动态切换到分库分表上？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-method.md)
-- [如何设计可以动态扩容缩容的分库分表方案？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-dynamic-expand.md)
-- [分库分表之后，id 主键如何处理？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-global-id-generate.md)
-
-#### 读写分离
-
-- [如何实现 MySQL 的读写分离？MySQL 主从复制原理是啥？如何解决 MySQL 主从同步的延时问题？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mysql-read-write-separation.md)
+### 架构
 
 #### 高并发系统
 
@@ -211,7 +223,9 @@
 - Eureka 和 Zookeeper 都可以提供服务注册与发现的功能，它们有什么区别？
 - [谈谈服务发现组件 Eureka 的主要调用过程？](https://github.com/doocs/advanced-java/blob/master/docs/micro-services/how-eureka-enable-service-discovery-and-service-registration.md)
 
-#### 数据处理
+### 大数据
+
+#### 大数据处理
 
 - [如何从大量的 URL 中找出相同的 URL？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-common-urls.md)
 - [如何从大量数据中找出高频词？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-top-100-words.md)
@@ -223,6 +237,25 @@
 - [如何从 5 亿个数中找出中位数？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-mid-value-in-500-millions.md)
 - [如何按照 query 的频度排序？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/sort-the-query-strings-by-counts.md)
 - [如何找出排名前 500 的数？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-rank-top-500-numbers.md)
+
+### 数据库
+
+#### 数据库基础
+
+- MySQL是如何优化的，数据量有多少
+- MySQL索引如何实现，为什么用B+树不用B树二叉树；
+- 聚簇索引和非聚簇索引的区别；
+
+#### 分库分表
+
+- [为什么要分库分表（设计高并发系统的时候，数据库层面该如何设计）？用过哪些分库分表中间件？不同的分库分表中间件都有什么优点和缺点？你们具体是如何对数据库如何进行垂直拆分或水平拆分的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard.md)
+- [现在有一个未分库分表的系统，未来要分库分表，如何设计才可以让系统从未分库分表动态切换到分库分表上？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-method.md)
+- [如何设计可以动态扩容缩容的分库分表方案？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-dynamic-expand.md)
+- [分库分表之后，id 主键如何处理？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-global-id-generate.md)
+
+#### 读写分离
+
+- [如何实现 MySQL 的读写分离？MySQL 主从复制原理是啥？如何解决 MySQL 主从同步的延时问题？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mysql-read-write-separation.md)
 
 
 
