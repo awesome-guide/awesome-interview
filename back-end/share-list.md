@@ -14,39 +14,35 @@
 
 1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？
 2. HashMap底层实现，为什么扩容是2的幂次；
-3. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
-4. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；
-5. CAS原理，ABA问题；
-6. ReentranLock与sychronized的区别
-7. hashmap 和 hashtable 的区别是什么？
-8. HashMap 实现原理，为什么使用红黑树？
-9. 简述 Java的反射机制
-10. 为什么 char 数组比 Java 中的 String 更适合存储密码？
-11. 为什么 String 在 Java 中是不可变的？
-12. 为什么Java不支持运算符重载？
-13. 为什么Java中不支持多重继承？
-14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？
-15. Java 类的加载流程是怎样的？什么是双亲委派机制？
-16. ThreadLocal 实现原理是什么？
-17. Java 如何高效进行数组拷贝
-18. CAS 实现原理是什么？
-19. 成员变量和方法的区别？
-20. Java 缓冲流 buffer 的用途和原理是什么？
-21. 简述 BIO, NIO, AIO 的区别
-22. 简述 Java 的 happen before 原则
-23. final 内存语义？什么时候用，使用时需要考虑的问题
-24. 原子操作类底层实现机制？自增操作是怎么保证原子性的？
-25. Java 中 interrupted 和 isInterrupted 方法的区别？
-26. Collections.sort和Arrays.sort的实现原理
-27. poll()方法和 remove()方法的区别？
-28. ArrayList集合加入1万条数据，应该怎么提高效率
-29. private修饰的方法可以通过反射访问，那么private的意义是什么
-30. Java类初始化顺序
-31. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么
-32. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计
-33. 一个java文件有3个类，编译后有几个class文件
-34. int a = 1; 是原子性操作吗
-35. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决
+3. hashmap 和 hashtable 的区别是什么？
+4. HashMap 实现原理，为什么使用红黑树？
+5. 简述 Java的反射机制
+6. 为什么 char 数组比 Java 中的 String 更适合存储密码？
+7. 为什么 String 在 Java 中是不可变的？
+8. 为什么Java不支持运算符重载？
+9. 为什么Java中不支持多重继承？
+10. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？
+11. Java 类的加载流程是怎样的？什么是双亲委派机制？
+12. ThreadLocal 实现原理是什么？
+13. Java 如何高效进行数组拷贝
+14. CAS 实现原理是什么？
+15. 成员变量和方法的区别？
+16. Java 缓冲流 buffer 的用途和原理是什么？
+17. 简述 BIO, NIO, AIO 的区别
+18. 简述 Java 的 happen before 原则
+19. final 内存语义？什么时候用，使用时需要考虑的问题
+20. 原子操作类底层实现机制？自增操作是怎么保证原子性的？
+21. Java 中 interrupted 和 isInterrupted 方法的区别？
+22. Collections.sort和Arrays.sort的实现原理
+23. poll()方法和 remove()方法的区别？
+24. ArrayList集合加入1万条数据，应该怎么提高效率
+25. private修饰的方法可以通过反射访问，那么private的意义是什么
+26. Java类初始化顺序
+27. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么
+28. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计
+29. 一个java文件有3个类，编译后有几个class文件
+30. int a = 1; 是原子性操作吗
+31. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决
 
 ##### Thread
 
@@ -89,6 +85,10 @@
 25. Semaphore拿到执行权的线程之间是否互斥
 26. fork/join 框架是什么？
 27. ReadWriteLock读写之间互斥吗
+28. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
+29. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；
+30. CAS原理，ABA问题；
+31. ReentranLock与sychronized的区别
 
 
 
