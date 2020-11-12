@@ -10,37 +10,141 @@
 
 #### Java基础
 
+##### jdk
+
 1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？
 2. HashMap底层实现，为什么扩容是2的幂次；
-3. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？
-4. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
-5. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；
-6. CAS原理，ABA问题；
-7. ReentranLock与sychronized的区别
-8. hashmap 和 hashtable 的区别是什么？
-9. HashMap 实现原理，为什么使用红黑树？
-10. 简述 Java的反射机制
-11. Java 线程间有多少通信方式？
-12. Java线程的状态及转换
-13. Java创建线程的方式
-14. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
-15. volitile的内存语义，底层如何实现，为什么不能保证原子性
-16. Java 类的加载流程是怎样的？什么是双亲委派机制？
-17. 简述常见的工厂模式以及单例模式的使用场景
-18. JVM 中内存模型是怎样的，简述新生代与老年代的区别？新生代有哪些区，作用是什么？
-19. 如何判断对象是否可以被回收（1引用计数2可达性分析）
-20. JVM常用垃圾回收算法，讲一下CMS原理
-21. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
-22. ThreadLocal 实现原理是什么？
-23. 简述 Spring 的初始化流程
-24. 简述生产者消费者模型
-25. Java 如何高效进行数组拷贝
-26. CAS 实现原理是什么？
-27. 成员变量和方法的区别？
-28. JVM 是怎么去调优的？简述过程和调优的结果
-29. Java 缓冲流 buffer 的用途和原理是什么？
-30. 简述 BIO, NIO, AIO 的区别
-31. 简述 Java 的 happen before 原则
+3. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
+4. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；
+5. CAS原理，ABA问题；
+6. ReentranLock与sychronized的区别
+7. hashmap 和 hashtable 的区别是什么？
+8. HashMap 实现原理，为什么使用红黑树？
+9. 简述 Java的反射机制
+10. 为什么 char 数组比 Java 中的 String 更适合存储密码？
+11. 为什么 String 在 Java 中是不可变的？
+12. 为什么Java不支持运算符重载？
+13. 为什么Java中不支持多重继承？
+14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？
+15. Java 类的加载流程是怎样的？什么是双亲委派机制？
+16. ThreadLocal 实现原理是什么？
+17. Java 如何高效进行数组拷贝
+18. CAS 实现原理是什么？
+19. 成员变量和方法的区别？
+20. Java 缓冲流 buffer 的用途和原理是什么？
+21. 简述 BIO, NIO, AIO 的区别
+22. 简述 Java 的 happen before 原则
+23. final 内存语义？什么时候用，使用时需要考虑的问题
+24. 原子操作类底层实现机制？自增操作是怎么保证原子性的？
+25. Java 中 interrupted 和 isInterrupted 方法的区别？
+26. Collections.sort和Arrays.sort的实现原理
+27. poll()方法和 remove()方法的区别？
+28. ArrayList集合加入1万条数据，应该怎么提高效率
+29. private修饰的方法可以通过反射访问，那么private的意义是什么
+30. Java类初始化顺序
+31. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么
+32. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计
+33. 一个java文件有3个类，编译后有几个class文件
+34. int a = 1; 是原子性操作吗
+35. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决
+
+##### Thread
+
+1. Java创建线程的方式
+2. Java 线程间有多少通信方式？
+3. Java线程的状态及转换
+4. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？
+5. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）
+6. 什么是 FutureTask？
+7. 如何在两个线程间共享数据？
+8.  多线程里面对一个整型做加减为啥不能用volatile；
+9. 
+
+##### Lock
+
+1. 编写 Java 程序时, 如何在 Java 中创建死锁并修复它？
+2. 为什么Java中 wait 方法需要在 synchronized 的方法中调用？
+3. 为什么 wait，notify 和 notifyAll 是在 Object 类中定义的而不是在 Thread 类中定义
+4. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
+5. volitile的内存语义，底层如何实现，为什么不能保证原子性
+6. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
+7. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。
+8. 阻塞队列的实现，ArrayBlockingQueue的底层实现？
+9. AQS 中独占锁和共享锁的操作流程大体描述一下
+10. 重入锁有什么好处，什么时候考虑用
+11. 读写锁有什么好处，什么时候考虑用？读锁是什么类型的锁，写锁呢？
+12. 说下读写锁里的锁降级流程，什么时候可以考虑用这个机制
+13. park 方法是怎么实现的
+14. 锁的等待通知机制 Condition 是怎么实现的，有了线程的等待通知机制为什么还要设计 Condition？
+15. 死锁怎么产生的，如何避免，自己写一个死锁
+16. 说说 Java 中有哪些锁
+17. sleep、wait、park、Condition 都能让线程等待，有什么区别？
+18. 阻塞和非阻塞有什么区别，他们可以用什么方式实现
+19. 队列（Queue）提供哪些操作
+20. 阻塞队列提供了哪些获取元素的方法，有什么区别？
+21. 阻塞队列有哪些实现？为什么要分有界无界？
+22. CountDownLatch 怎么实现的，什么时候考虑用？
+23. CyclicBarrier 怎么实现的，什么时候考虑用？
+24. Semaphore 怎么实现的，什么时候考虑用？
+25. Semaphore拿到执行权的线程之间是否互斥
+26. fork/join 框架是什么？
+27. ReadWriteLock读写之间互斥吗
+
+
+
+##### 模式
+
+1. 简述常见的工厂模式以及单例模式的使用场景
+2. 简述生产者消费者模型，写一个生产者消费者模式
+3. 写一个你认为最好的单例模式
+
+##### JVM
+
+1. JVM 中内存模型是怎样的，简述新生代与老年代的区别？新生代有哪些区，作用是什么？
+
+2. 如何判断对象是否可以被回收（1引用计数2可达性分析）
+
+3. JVM常用垃圾回收算法，讲一下CMS原理
+
+4. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？
+
+5. JVM 是怎么去调优的？简述过程和调优的结果
+
+6. 如何监控 GC
+
+7. 常见 OutOfMemoryError 有哪些
+
+8. 常见的 JDK 诊断命令有哪些，应用场景？
+
+9. CPU 较高，如何定位问题
+
+10. 内存占用较高，如何定位大对象
+
+11. 内存泄漏时，如何实时跟踪内存变化情况
+
+12. 内存泄漏时，如何定位问题代码
+
+13. 大型项目如何进行性能瓶颈调优？
+
+14. 字节码是如何在 JVM 中进行流转的（栈帧）
+
+15. 方法调用的底层实现
+
+16. 方法重写和重载的实现过程
+
+17. invokedynamic 指令实现
+
+18. 如何修改字节码
+
+19. JIT 参数配置如何影响程序运行？
+
+20. 虚拟机有哪些性能优化策略
+
+21.  JVM收集器G1的内存模型和CMS的内存模型有什么不同？
+
+22. 对方法区和永久区的理解以及它们之间的关系
+
+    
 
 
 
@@ -81,23 +185,25 @@
 
 - 简述 TCP 三次握手以及四次挥手的流程。为什么需要三次握手以及四次挥手？TCP四次挥手说一下，为什么要等待2MSL，第二次和第三次挥手是否可以合并（可以）。
 - TCP3次握手过程，第三次是否可以携带数据，如何避免SYN攻击（syncookies）
--  RestFul 与 RPC 的区别是什么？RestFul 的优点在哪里？
--  HTTP 与 HTTPS 有哪些区别？
--  RestFul 是什么？RestFul 请求的 URL 有什么特点？
--  一次 HTTP 的请求过程中发生了什么？
--  TCP 与 UDP 在网络协议中的哪一层，他们之间有什么区别？
--  TCP 中常见的拥塞控制算法有哪些？
--  TCP 怎么保证可靠传输？
--  从系统层面上，UDP如何保证尽量可靠？
+- RestFul 与 RPC 的区别是什么？RestFul 的优点在哪里？
+- HTTP 与 HTTPS 有哪些区别？
+- RestFul 是什么？RestFul 请求的 URL 有什么特点？
+- 一次 HTTP 的请求过程中发生了什么？
+- TCP 与 UDP 在网络协议中的哪一层，他们之间有什么区别？
+- TCP 中常见的拥塞控制算法有哪些？
+- TCP 怎么保证可靠传输？
+- 从系统层面上，UDP如何保证尽量可靠？
 - TCP 的 keepalive 了解吗？说一说它和 http 的 keepalive 的区别？
--  简述 TCP 滑动窗口以及重传机制
--  简述 HTTP 1.0，1.1，2.0 的主要区别
--  简述 TCP 的 TIME_WAIT
+- 简述 TCP 滑动窗口以及重传机制
+- 简述 HTTP 1.0，1.1，2.0 的主要区别
+- 简述 TCP 的 TIME_WAIT
 - HTTP 的方法有哪些？
--  简述 TCP 协议的延迟 ACK 和累计应答
--  简述 TCP 的报文头部结构
--  简述 TCP 半连接发生场景
--  什么是 SYN flood，如何防止这类攻击？ 
+- 简述 TCP 协议的延迟 ACK 和累计应答
+- 简述 TCP 的报文头部结构
+- 简述 TCP 半连接发生场景
+- 什么是 SYN flood，如何防止这类攻击？
+- RPC和http的区别 
+- 粘包和拆包？
 
 
 
@@ -112,6 +218,7 @@
 5. [如何保证消息的顺序性？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/how-to-ensure-the-order-of-messages.md)
 6. [如何解决消息队列的延时以及过期失效问题？消息队列满了以后该怎么处理？有几百万消息持续积压几小时，说说怎么解决？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mq-time-delay-and-expired-failure.md)
 7. [如果让你写一个消息队列，该如何进行架构设计啊？说一下你的思路。](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mq-design.md)
+8. [如何从0到1设计一个MQ消息队列](http://youzhixueyuan.com/design-the-message-queue.html)
 
 #### 搜索引擎
 
@@ -140,9 +247,22 @@
 
 ### 架构
 
+#### 基础
+
+1.  Spring boot和spring的差别，tomcat如何嵌入spring boot的/spring boot中的tomcat是如何启动的；
+2.  Spring如何解决循环依赖问题；
+3. 简述 Spring 的初始化流程
+4. dispatchServlet怎样分发任务的
+5. 高并发情况下，我们系统是如何支撑大量的请求的
+6. 集群如何同步会话状态
+7. 什么情况会出现雪崩，以及如何应对？
+8. AOP和IOC原理
+
 #### 高并发系统
 
 - [如何设计一个高并发系统？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/high-concurrency-design.md)
+- 1000个多并发线程，10台机器，每台机器4核的，设计线程池大小。
+- 如何设计一个高并发的日志系统
 
 #### 分布式框架
 
@@ -244,7 +364,10 @@
 
 - MySQL是如何优化的，数据量有多少
 - MySQL索引如何实现，为什么用B+树不用B树二叉树；
+- B树和B+树是解决什么样的问题的，怎样演化过来，之间区别
 - 聚簇索引和非聚簇索引的区别；
+- [MySQL行锁、表锁、悲观锁、乐观锁的特点与应用](http://youzhixueyuan.com/mysql-row-locks-table-locks-pessimistic-locks.html)
+- mysql给离散度低的字段建立索引会出现什么问题，具体说下原因
 
 #### 分库分表
 
