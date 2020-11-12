@@ -12,62 +12,65 @@
 
 ##### jdk
 
-1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？
-2. HashMap底层实现，为什么扩容是2的幂次；
-3. hashmap 和 hashtable 的区别是什么？
-4. HashMap 实现原理，为什么使用红黑树？
-5. 简述 Java的反射机制
-6. 为什么 char 数组比 Java 中的 String 更适合存储密码？
-7. 为什么 String 在 Java 中是不可变的？
-8. 为什么Java不支持运算符重载？
-9. 为什么Java中不支持多重继承？
-10. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？
-11. Java 类的加载流程是怎样的？什么是双亲委派机制？
-12. ThreadLocal 实现原理是什么？
-13. Java 如何高效进行数组拷贝
-14. CAS 实现原理是什么？
-15. 成员变量和方法的区别？
-16. Java 缓冲流 buffer 的用途和原理是什么？
-17. 简述 BIO, NIO, AIO 的区别
-18. 简述 Java 的 happen before 原则
-19. final 内存语义？什么时候用，使用时需要考虑的问题
-20. 原子操作类底层实现机制？自增操作是怎么保证原子性的？
-21. Java 中 interrupted 和 isInterrupted 方法的区别？
-22. Collections.sort和Arrays.sort的实现原理
-23. poll()方法和 remove()方法的区别？
-24. ArrayList集合加入1万条数据，应该怎么提高效率
-25. private修饰的方法可以通过反射访问，那么private的意义是什么
-26. Java类初始化顺序
-27. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么
-28. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计
-29. 一个java文件有3个类，编译后有几个class文件
-30. int a = 1; 是原子性操作吗
-31. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决
+1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？![](../images/草莓.png)
+2. HashMap底层实现，为什么扩容是2的幂次；为什么是0.75f，1.7与1.8的区别 `@A`![](../images/草莓.png)
+3. hashmap 和 hashtable 的区别是什么？`@A`![](../images/草莓.png)
+4. HashMap 实现原理，为什么使用红黑树？`@A`![](../images/草莓.png)
+5. ArrayList集合加入1万条数据，应该怎么提高效率`@A`![](../images/草莓.png)
+6. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决 `@A`![](../images/草莓.png)
+7. 简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度@A![](../images/草莓.png)
+8. 为什么 char 数组比 Java 中的 String 更适合存储密码？ `@B`![](../images/柠檬.png)
+9. 为什么 String 在 Java 中是不可变的？@B ![](../images/柠檬.png)
+10. 为什么Java不支持运算符重载？`@B`![](../images/柠檬.png)
+11. 为什么Java中不支持多重继承？ `@B`![](../images/柠檬.png)
+12. Java类初始化顺序 `@B`![](../images/柠檬.png)
+13. Java 类的加载流程是怎样的？什么是双亲委派机制？@B![](../images/柠檬.png)
+14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？@B![](../images/柠檬.png)
+15. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
+16. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
+17. CAS 实现原理是什么？@C![](../images/西瓜.png)
+18. 成员变量和方法的区别？@C![](../images/西瓜.png)
+19. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
+20. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
+21. final 内存语义？什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
+22. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
+23. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
+24. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
+25. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
+26. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
+27. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
+28. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
+29. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
+30. 简述 Java的反射机制    @E![](../images/葡萄.png)
+31. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
+32. 简述使用协程的优点@E![](../images/葡萄.png)
 
 ##### Thread
 
-1. Java创建线程的方式
-2. Java 线程间有多少通信方式？
-3. Java线程的状态及转换
-4. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？
-5. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）
-6. 什么是 FutureTask？
-7. 如何在两个线程间共享数据？
-8.  多线程里面对一个整型做加减为啥不能用volatile；
-9. 
+1. Java创建线程的方式 @F![](../images/猕猴桃.png)
+2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
+3. Java线程的状态及转换@F![](../images/猕猴桃.png)
+4. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![](../images/芒果.png)
+5. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）@A![](../images/芒果.png)
+6. 什么是 FutureTask？@B![](../images/樱桃.png)
+7. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
+8.  多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
+9. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
+10. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
+11. 
 
 ##### Lock
 
-1. 编写 Java 程序时, 如何在 Java 中创建死锁并修复它？
-2. 为什么Java中 wait 方法需要在 synchronized 的方法中调用？
-3. 为什么 wait，notify 和 notifyAll 是在 Object 类中定义的而不是在 Thread 类中定义
-4. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
-5. volitile的内存语义，底层如何实现，为什么不能保证原子性
-6. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
-7. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。
-8. 阻塞队列的实现，ArrayBlockingQueue的底层实现？
-9. AQS 中独占锁和共享锁的操作流程大体描述一下
-10. 重入锁有什么好处，什么时候考虑用
+1. 编写 Java 程序时, 如何在 Java 中创建死锁并修复它？@C![](../images/红心柚.png)
+2. 为什么Java中 wait 方法需要在 synchronized 的方法中调用？@C![](../images/红心柚.png)
+3. 为什么 wait，notify 和 notifyAll 是在 Object 类中定义的而不是在 Thread 类中定义@C![](../images/红心柚.png)
+4. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点@C![](../images/红心柚.png)
+5. volitile的内存语义，底层如何实现，为什么不能保证原子性@C![](../images/红心柚.png)
+6. Java 常见锁有哪些？ReetrantLock 是怎么实现的？@D🍐
+7. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。@D🍐
+8. 阻塞队列的实现，ArrayBlockingQueue的底层实现？@D🍐
+9. AQS 中独占锁和共享锁的操作流程大体描述一下@D🍐
+10. 重入锁有什么好处，什么时候考虑用   @D🍐
 11. 读写锁有什么好处，什么时候考虑用？读锁是什么类型的锁，写锁呢？
 12. 说下读写锁里的锁降级流程，什么时候可以考虑用这个机制
 13. park 方法是怎么实现的
