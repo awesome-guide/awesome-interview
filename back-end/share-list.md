@@ -44,6 +44,7 @@
 30. 简述 Java的反射机制    @E![](../images/葡萄.png)
 31. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
 32. 简述使用协程的优点@E![](../images/葡萄.png)
+33. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
 
 ##### Thread
 
@@ -92,6 +93,7 @@
 29. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；🍑
 30. CAS原理，ABA问题；🍑
 31. ReentranLock与sychronized的区别🍑
+32. 什么是公平锁？什么是非公平锁？🍑
 
 
 
@@ -147,6 +149,8 @@
 
 22. 对方法区和永久区的理解以及它们之间的关系📚
 
+23. Java 故障排查方式有哪些，如何排故查的📚
+
     
 
 
@@ -174,6 +178,8 @@
 - ▲ 1 反转链表 (Leetcode)
 - ▲ 1 第一个只出现一次的字符 (Leetcode)
 -  顺时针打印矩阵
+-  用栈实现队列 (Leetcode)
+-  环形链表 (Leetcode)
 
 #### 计算机基础
 
@@ -371,6 +377,7 @@
 - 聚簇索引和非聚簇索引的区别；
 - [MySQL行锁、表锁、悲观锁、乐观锁的特点与应用](http://youzhixueyuan.com/mysql-row-locks-table-locks-pessimistic-locks.html)
 - mysql给离散度低的字段建立索引会出现什么问题，具体说下原因
+- 什么情况下会发生死锁，如何解决死锁？
 
 #### 分库分表
 
