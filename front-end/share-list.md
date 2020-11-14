@@ -112,13 +112,23 @@
 
 第 51 题：Vue 的响应式原理中 Object.defineProperty 有什么缺陷？
 
+解析：[51 题](https://github.com/hanyueqiang/frontEnd_book/issues/7)
+
 第 52 题：怎么让一个 div 水平垂直居中
+
+解析：[52 题](https://github.com/hanyueqiang/frontEnd_book/issues/8)
 
 第 53 题：输出以下代码的执行结果并解释为什么
 
+解析：[53 题](https://github.com/hanyueqiang/frontEnd_book/issues/9)
+
 第 54 题：冒泡排序如何实现，时间复杂度是多少， 还可以如何改进？
 
+解析：[54 题](https://github.com/hanyueqiang/frontEnd_book/issues/10)
+
 第 55 题：某公司 1 到 12 月份的销售额存在一个对象里面
+
+解析：[55 题](https://github.com/hanyueqiang/frontEnd_book/issues/11)
 
 第 56 题：要求设计 LazyMan 类，实现以下功能。
 
