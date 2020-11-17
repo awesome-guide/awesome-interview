@@ -48,7 +48,7 @@
 
 ##### Thread
 
-1. Java创建线程的方式 @F![](../images/猕猴桃.png)
+1. [Java创建线程的方式](thread/Thread.md) @F![](../images/猕猴桃.png)
 2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
 3. Java线程的状态及转换@F![](../images/猕猴桃.png)
 4. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![](../images/芒果.png)
