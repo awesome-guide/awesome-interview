@@ -26,25 +26,38 @@
 12. Java类初始化顺序 `@B`![](../images/柠檬.png)
 13. Java 类的加载流程是怎样的？什么是双亲委派机制？@B![](../images/柠檬.png)
 14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？@B![](../images/柠檬.png)
-15. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
-16. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
-17. CAS 实现原理是什么？@C![](../images/西瓜.png)
-18. 成员变量和方法的区别？@C![](../images/西瓜.png)
-19. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
-20. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
-21. final 内存语义？什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
-22. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
-23. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
-24. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
-25. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
-26. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
-27. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
-28. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
-29. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
-30. 简述 Java的反射机制    @E![](../images/葡萄.png)
-31. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
-32. 简述使用协程的优点@E![](../images/葡萄.png)
-33. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
+15. char 型变量中能不能存贮一个中文汉字，为什么？![](../images/柠檬.png)
+16. 你对String对象的intern()熟悉么?![](../images/柠檬.png)
+17. java 创建对象的几种方式![](../images/柠檬.png)
+18. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
+19. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
+20. CAS 实现原理是什么？@C![](../images/西瓜.png)
+21. 成员变量和方法的区别？@C![](../images/西瓜.png)
+22. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
+23. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
+24. final 内存语义？final有哪些用法，什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
+25. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
+26. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
+27. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
+28. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
+29. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
+30. short s1=1; s1 = s1 + 1;该段代码是否有错,有的话怎么改？short s1=1; s1 += 1; 该段代码是否有错,有的话怎么改？![](../images/牛油果.png)
+31. int 和Integer谁占用的内存更多?![](../images/牛油果.png)
+32. a=a+b与a+=b有什么区别吗?![](../images/牛油果.png)
+33. a.hashCode()有什么用?与a.equals(b)有什么关系,equals()和hashcode的区别![](../images/牛油果.png)
+34. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
+35. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
+36. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
+37. 简述 Java的反射机制    @E![](../images/葡萄.png)
+38. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
+39. 简述使用协程的优点@E![](../images/葡萄.png)
+40. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
+41. 3*0.1==0.3返回值是什么![](../images/葡萄.png)
+42. Object中有哪些公共方法?![](../images/葡萄.png)
+43. Error vs Exception的区别![](../images/葡萄.png)
+44. try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?![](../images/葡萄.png)
+45. Java 语言如何进行异常处理，关键字：throws、throw、try、catch、finally 分别如何使用？![](../images/葡萄.png)
+46. 
 
 ##### Thread
 
@@ -91,7 +104,8 @@
 41. 如何用Java实现阻塞队列
 42. 用Java编程一个会导致死锁的程序，你将怎么解决？
 43. 你将如何使用thread dump？你将如何分析Thread dump？
-44. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。
+44. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？
+45. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。
 
 ##### Lock
 
