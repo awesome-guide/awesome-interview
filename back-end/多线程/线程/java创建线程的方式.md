@@ -1,6 +1,6 @@
 ## Thread
 
-##### 一、Java创建线程的方式
+#### 一、Java创建线程的方式
 
 1. 继承Thread类，并复写run方法，创建该类对象，调用start方法开启线程。此方式没有返回值 
 
@@ -124,3 +124,7 @@ public class MyRunnable implements Runnable {
    (2) call()方法执行后可以有返回值，run()方法没有返回值
    (3) call()方法可以抛出异常，run()方法不可以
    (4) 运行Callable任务可以拿到一个Future对象，表示异步计算的结果 。通过Future对象可以了解任务执行情况，可取消任务的执行，还可获取执行结果
+
+
+
+
