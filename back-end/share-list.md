@@ -10,28 +10,184 @@
 
 #### Java基础
 
-1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？
-2. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？
-3.  synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？
-4.  hashmap 和 hashtable 的区别是什么？
-5. HashMap 实现原理，为什么使用红黑树？
-6. 简述 Java的反射机制
-7. Java 线程间有多少通信方式？
-8. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点
-9. Java 类的加载流程是怎样的？什么是双亲委派机制？
-10. 简述常见的工厂模式以及单例模式的使用场景
-11. JVM 中内存模型是怎样的，简述新生代与老年代的区别？
-12. Java 常见锁有哪些？ReetrantLock 是怎么实现的？
-13. ThreadLocal 实现原理是什么？
-14. 简述 Spring 的初始化流程
-15. 简述生产者消费者模型
-16. Java 如何高效进行数组拷贝
-17. CAS 实现原理是什么？
-18. 成员变量和方法的区别？
-19. JVM 是怎么去调优的？简述过程和调优的结果
-20. Java 缓冲流 buffer 的用途和原理是什么？
-21. 简述 BIO, NIO, AIO 的区别
-22.  简述 Java 的 happen before 原则
+##### jdk
+
+1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？![](../images/草莓.png)
+2. HashMap底层实现，为什么扩容是2的幂次；为什么是0.75f，1.7与1.8的区别 `@A`![](../images/草莓.png)
+3. hashmap 和 hashtable 的区别是什么？`@A`![](../images/草莓.png)
+4. HashMap 实现原理，为什么使用红黑树？`@A`![](../images/草莓.png)
+5. ArrayList集合加入1万条数据，应该怎么提高效率`@A`![](../images/草莓.png)
+6. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决 `@A`![](../images/草莓.png)
+7. 简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度@A![](../images/草莓.png)
+8. 为什么 char 数组比 Java 中的 String 更适合存储密码？ `@B`![](../images/柠檬.png)
+9. 为什么 String 在 Java 中是不可变的？@B ![](../images/柠檬.png)
+10. 为什么Java不支持运算符重载？`@B`![](../images/柠檬.png)
+11. 为什么Java中不支持多重继承？ `@B`![](../images/柠檬.png)
+12. Java类初始化顺序 `@B`![](../images/柠檬.png)
+13. Java 类的加载流程是怎样的？什么是双亲委派机制？@B![](../images/柠檬.png)
+14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？@B![](../images/柠檬.png)
+15. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
+16. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
+17. CAS 实现原理是什么？@C![](../images/西瓜.png)
+18. 成员变量和方法的区别？@C![](../images/西瓜.png)
+19. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
+20. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
+21. final 内存语义？什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
+22. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
+23. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
+24. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
+25. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
+26. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
+27. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
+28. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
+29. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
+30. 简述 Java的反射机制    @E![](../images/葡萄.png)
+31. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
+32. 简述使用协程的优点@E![](../images/葡萄.png)
+33. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
+
+##### Thread
+
+1. [Java创建线程的方式](thread/Thread.md) @F![](../images/猕猴桃.png)
+2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
+3. Java线程的状态及转换@F![](../images/猕猴桃.png)
+4. 启动线程方法 start()和 run()有什么区别？
+5. 线程中的 wait()和 sleep()方法有什么区别？
+6. 为什么wait, notify 和 notifyAll这些方法不在thread类里面？
+7. 为什么wait和notify方法要在同步块中调用？
+8. 讲下join,yield方法的作用,以及什么场合用它们？
+9. 为什么Thread类的sleep()和yield()方法是静态的？
+10. 为什么Thread里面的大部分方法都是final的？
+11. 多线程同步有哪几种方法？
+12. 如何控制某个方法允许并发访问线程的大小？怎么控制同一时间只有 3 个线程运行？
+13. 什么是原子性、可见性、有序性？
+14. 一个线程运行时发生异常会怎样？
+15. 在线程中你怎么处理不可控制异常
+16. 为什么你应该在循环中检查等待条件?
+17. 多线程中的忙循环是什么?
+18. 线程 yield()方法有什么用？
+19. 线程 sleep(0)方法有什么用？
+20. 线程中断是否能直接调用stop,为什么?
+21. 怎么检测一个线程是否拥有锁？
+22. 不可变对象对多线程有什么帮助？
+23. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![](../images/芒果.png)
+24. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）@A![](../images/芒果.png)
+25. 什么是 FutureTask？@B![](../images/樱桃.png)
+26. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
+27. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
+28. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
+29. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
+30. CyclicBarrier 和 CountDownLatch 的区别？
+31. Fork/Join 框架是干什么的？
+32. 常用的线程池模式以及不同线程池的使用场景？
+33. BlockingQueue的原理是什么
+34. 如何确保N个线程可以访问N个资源同时又不导致死锁？
+35. 如何写代码来解决生产者消费者问题？
+36. 你如何确保main()方法所在的线程是Java程序最后结束的线程？
+37. 同步方法和同步块，哪个是更好的选择？
+38. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律
+39. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好
+40. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？
+41. 如何用Java实现阻塞队列
+42. 用Java编程一个会导致死锁的程序，你将怎么解决？
+43. 你将如何使用thread dump？你将如何分析Thread dump？
+44. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。
+
+##### Lock
+
+1. 编写 Java 程序时, 如何在 Java 中创建死锁并修复它？@C![](../images/红心柚.png)
+2. 为什么Java中 wait 方法需要在 synchronized 的方法中调用？@C![](../images/红心柚.png)
+3. 为什么 wait，notify 和 notifyAll 是在 Object 类中定义的而不是在 Thread 类中定义@C![](../images/红心柚.png)
+4. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点@C![](../images/红心柚.png)
+5. volitile的内存语义，底层如何实现，为什么不能保证原子性@C![](../images/红心柚.png)
+6. Java 常见锁有哪些？ReetrantLock 是怎么实现的？@D🍐
+7. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。@D🍐
+8. 阻塞队列的实现，ArrayBlockingQueue的底层实现？@D🍐
+9. AQS 中独占锁和共享锁的操作流程大体描述一下@D🍐
+10. 重入锁有什么好处，什么时候考虑用   @D🍐
+11. 读写锁有什么好处，什么时候考虑用？读锁是什么类型的锁，写锁呢？🍐
+12. 说下读写锁里的锁降级流程，什么时候可以考虑用这个机制🍌
+13. park 方法是怎么实现的🍌
+14. 锁的等待通知机制 Condition 是怎么实现的，有了线程的等待通知机制为什么还要设计 Condition？🍌
+15. 死锁怎么产生的，如何避免，自己写一个死锁🍌
+16. 说说 Java 中有哪些锁🍌
+17. sleep、wait、park、Condition 都能让线程等待，有什么区别？🍌
+18. 阻塞和非阻塞有什么区别，他们可以用什么方式实现🎈
+19. 队列（Queue）提供哪些操作🎈
+20. 阻塞队列提供了哪些获取元素的方法，有什么区别？🎈
+21. 阻塞队列有哪些实现？为什么要分有界无界？🎈
+22. CountDownLatch 怎么实现的，什么时候考虑用？🎈
+23. CyclicBarrier 怎么实现的，什么时候考虑用？🎈
+24. Semaphore 怎么实现的，什么时候考虑用？🎈
+25. Semaphore拿到执行权的线程之间是否互斥🎈
+26. fork/join 框架是什么？🍑
+27. ReadWriteLock读写之间互斥吗🍑
+28. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？🍑
+29. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；🍑
+30. CAS原理，ABA问题；🍑
+31. ReentranLock与sychronized的区别🍑
+32. 什么是公平锁？什么是非公平锁？🍑
+33. Java中活锁和死锁有什么区别？
+    什么是乐观锁和悲观锁
+34. 
+
+
+
+##### 模式
+
+1. 简述常见的工厂模式以及单例模式的使用场景🌞
+2. 简述生产者消费者模型，写一个生产者消费者模式🌞
+3. 写一个你认为最好的单例模式🌞
+
+##### JVM
+
+1. JVM 中内存模型是怎样的，简述新生代与老年代的区别？新生代有哪些区，作用是什么？🌛
+
+2. 如何判断对象是否可以被回收（1引用计数2可达性分析）🌛
+
+3. JVM常用垃圾回收算法，讲一下CMS原理🌛
+
+4. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？🌛
+
+5. JVM 是怎么去调优的？简述过程和调优的结果🌛
+
+6. 如何监控 GC✨
+
+7. 常见 OutOfMemoryError 有哪些✨
+
+8. 常见的 JDK 诊断命令有哪些，应用场景？✨
+
+9. CPU 较高，如何定位问题✨
+
+10. 内存占用较高，如何定位大对象✨
+
+11. 内存泄漏时，如何实时跟踪内存变化情况✨
+
+12. 内存泄漏时，如何定位问题代码✨
+
+13. 大型项目如何进行性能瓶颈调优？🌲
+
+14. 字节码是如何在 JVM 中进行流转的（栈帧）🌲
+
+15. 方法调用的底层实现🌲
+
+16. 方法重写和重载的实现过程🌲
+
+17. invokedynamic 指令实现🌲
+
+18. 如何修改字节码📚
+
+19. JIT 参数配置如何影响程序运行？📚
+
+20. 虚拟机有哪些性能优化策略📚
+
+21.  JVM收集器G1的内存模型和CMS的内存模型有什么不同？📚
+
+22. 对方法区和永久区的理解以及它们之间的关系📚
+
+23. Java 故障排查方式有哪些，如何排故查的📚
+
+    
 
 
 
@@ -57,33 +213,46 @@
 - ▲ 4 简述常见的负载均衡算法
 - ▲ 1 反转链表 (Leetcode)
 - ▲ 1 第一个只出现一次的字符 (Leetcode)
+-  顺时针打印矩阵
+-  用栈实现队列 (Leetcode)
+-  环形链表 (Leetcode)
+
+#### 计算机基础
+
+- Thread.sleep(0) 到底有什么用？
+
+- 操作系统，进程、线程和协程的区别
+- 进程间通信方式有哪些
 
 
 
 #### 网络协议
 
-- 简述 TCP 三次握手以及四次挥手的流程。为什么需要三次握手以及四次挥手？
--  RestFul 与 RPC 的区别是什么？RestFul 的优点在哪里？
--  HTTP 与 HTTPS 有哪些区别？
--  RestFul 是什么？RestFul 请求的 URL 有什么特点？
--  一次 HTTP 的请求过程中发生了什么？
--  TCP 与 UDP 在网络协议中的哪一层，他们之间有什么区别？
--  TCP 中常见的拥塞控制算法有哪些？
--  TCP 怎么保证可靠传输？
--  从系统层面上，UDP如何保证尽量可靠？
+- 简述 TCP 三次握手以及四次挥手的流程。为什么需要三次握手以及四次挥手？TCP四次挥手说一下，为什么要等待2MSL，第二次和第三次挥手是否可以合并（可以）。
+- TCP3次握手过程，第三次是否可以携带数据，如何避免SYN攻击（syncookies）
+- RestFul 与 RPC 的区别是什么？RestFul 的优点在哪里？
+- HTTP 与 HTTPS 有哪些区别？
+- RestFul 是什么？RestFul 请求的 URL 有什么特点？
+- 一次 HTTP 的请求过程中发生了什么？
+- TCP 与 UDP 在网络协议中的哪一层，他们之间有什么区别？
+- TCP 中常见的拥塞控制算法有哪些？
+- TCP 怎么保证可靠传输？
+- 从系统层面上，UDP如何保证尽量可靠？
 - TCP 的 keepalive 了解吗？说一说它和 http 的 keepalive 的区别？
--  简述 TCP 滑动窗口以及重传机制
--  简述 HTTP 1.0，1.1，2.0 的主要区别
--  简述 TCP 的 TIME_WAIT
+- 简述 TCP 滑动窗口以及重传机制
+- 简述 HTTP 1.0，1.1，2.0 的主要区别
+- 简述 TCP 的 TIME_WAIT
 - HTTP 的方法有哪些？
--  简述 TCP 协议的延迟 ACK 和累计应答
--  简述 TCP 的报文头部结构
--  简述 TCP 半连接发生场景
--  什么是 SYN flood，如何防止这类攻击？ 
+- 简述 TCP 协议的延迟 ACK 和累计应答
+- 简述 TCP 的报文头部结构
+- 简述 TCP 半连接发生场景
+- 什么是 SYN flood，如何防止这类攻击？
+- RPC和http的区别 
+- 粘包和拆包？
 
 
 
-### 高并发相关
+### 中间件相关
 
 #### MQ
 
@@ -94,6 +263,7 @@
 5. [如何保证消息的顺序性？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/how-to-ensure-the-order-of-messages.md)
 6. [如何解决消息队列的延时以及过期失效问题？消息队列满了以后该怎么处理？有几百万消息持续积压几小时，说说怎么解决？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mq-time-delay-and-expired-failure.md)
 7. [如果让你写一个消息队列，该如何进行架构设计啊？说一下你的思路。](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mq-design.md)
+8. [如何从0到1设计一个MQ消息队列](http://youzhixueyuan.com/design-the-message-queue.html)
 
 #### 搜索引擎
 
@@ -101,6 +271,7 @@
 2. [ES 写入数据的工作原理是什么啊？ES 查询数据的工作原理是什么啊？底层的 Lucene 介绍一下呗？倒排索引了解吗？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-write-query-search.md)
 3. [ES 在数据量很大的情况下（数十亿级别）如何提高查询效率啊？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-optimizing-query-performance.md)
 4. [ES 生产集群的部署架构是什么？每个索引的数据量大概有多少？每个索引大概有多少个分片？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/es-production-cluster.md)
+5. 倒排索引与正排索引的区别
 
 #### 缓存
 
@@ -116,21 +287,27 @@
 10. [如何保证缓存与数据库的双写一致性？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-consistence.md)
 11. [Redis 的并发竞争问题是什么？如何解决这个问题？了解 Redis 事务的 CAS 方案吗？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-cas.md)
 12. [生产环境中的 Redis 是怎么部署的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/redis-production-environment.md)
+13. Redis常用数据结构
+14. 如何用Redis实现分布式锁，可能遇到的问题和解决办法
 
-#### 分库分表
+### 架构
 
-- [为什么要分库分表（设计高并发系统的时候，数据库层面该如何设计）？用过哪些分库分表中间件？不同的分库分表中间件都有什么优点和缺点？你们具体是如何对数据库如何进行垂直拆分或水平拆分的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard.md)
-- [现在有一个未分库分表的系统，未来要分库分表，如何设计才可以让系统从未分库分表动态切换到分库分表上？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-method.md)
-- [如何设计可以动态扩容缩容的分库分表方案？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-dynamic-expand.md)
-- [分库分表之后，id 主键如何处理？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-global-id-generate.md)
+#### 基础
 
-#### 读写分离
-
-- [如何实现 MySQL 的读写分离？MySQL 主从复制原理是啥？如何解决 MySQL 主从同步的延时问题？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mysql-read-write-separation.md)
+1.  Spring boot和spring的差别，tomcat如何嵌入spring boot的/spring boot中的tomcat是如何启动的；
+2.  Spring如何解决循环依赖问题；
+3. 简述 Spring 的初始化流程
+4. dispatchServlet怎样分发任务的
+5. 高并发情况下，我们系统是如何支撑大量的请求的
+6. 集群如何同步会话状态
+7. 什么情况会出现雪崩，以及如何应对？
+8. AOP和IOC原理
 
 #### 高并发系统
 
 - [如何设计一个高并发系统？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/high-concurrency-design.md)
+- 1000个多并发线程，10台机器，每台机器4核的，设计线程池大小。
+- 如何设计一个高并发的日志系统
 
 #### 分布式框架
 
@@ -211,7 +388,9 @@
 - Eureka 和 Zookeeper 都可以提供服务注册与发现的功能，它们有什么区别？
 - [谈谈服务发现组件 Eureka 的主要调用过程？](https://github.com/doocs/advanced-java/blob/master/docs/micro-services/how-eureka-enable-service-discovery-and-service-registration.md)
 
-#### 数据处理
+### 大数据
+
+#### 大数据处理
 
 - [如何从大量的 URL 中找出相同的 URL？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-common-urls.md)
 - [如何从大量数据中找出高频词？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-top-100-words.md)
@@ -223,6 +402,29 @@
 - [如何从 5 亿个数中找出中位数？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-mid-value-in-500-millions.md)
 - [如何按照 query 的频度排序？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/sort-the-query-strings-by-counts.md)
 - [如何找出排名前 500 的数？](https://github.com/doocs/advanced-java/blob/master/docs/big-data/find-rank-top-500-numbers.md)
+
+### 数据库
+
+#### 数据库基础
+
+- MySQL是如何优化的，数据量有多少
+- MySQL索引如何实现，为什么用B+树不用B树二叉树；
+- B树和B+树是解决什么样的问题的，怎样演化过来，之间区别
+- 聚簇索引和非聚簇索引的区别；
+- [MySQL行锁、表锁、悲观锁、乐观锁的特点与应用](http://youzhixueyuan.com/mysql-row-locks-table-locks-pessimistic-locks.html)
+- mysql给离散度低的字段建立索引会出现什么问题，具体说下原因
+- 什么情况下会发生死锁，如何解决死锁？
+
+#### 分库分表
+
+- [为什么要分库分表（设计高并发系统的时候，数据库层面该如何设计）？用过哪些分库分表中间件？不同的分库分表中间件都有什么优点和缺点？你们具体是如何对数据库如何进行垂直拆分或水平拆分的？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard.md)
+- [现在有一个未分库分表的系统，未来要分库分表，如何设计才可以让系统从未分库分表动态切换到分库分表上？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-method.md)
+- [如何设计可以动态扩容缩容的分库分表方案？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-dynamic-expand.md)
+- [分库分表之后，id 主键如何处理？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/database-shard-global-id-generate.md)
+
+#### 读写分离
+
+- [如何实现 MySQL 的读写分离？MySQL 主从复制原理是啥？如何解决 MySQL 主从同步的延时问题？](https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/mysql-read-write-separation.md)
 
 
 
