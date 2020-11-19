@@ -64,7 +64,7 @@
 1. [Java创建线程的方式](thread/Thread.md) @F![](../images/猕猴桃.png)
 2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
 3. 编写两个线程，一个线程打印1~25，另一个线程打印字母A~Z，打印顺序为12A34B56C……5152Z，要求使用线程间的通信。![](../images/猕猴桃.png)
-4. [ Java 线程的状态及转换](多线程/线程/java 线程的状态及转换.md) ![](../images/猕猴桃.png)
+4. [Java 线程的状态及转换](多线程/线程/java 线程的状态及转换.md) ![](../images/猕猴桃.png)
 5. 在线程中你怎么处理异常？![](../images/猕猴桃.png)
 6. 启动线程方法 start()和 run()有什么区别？![](../images/猕猴桃.png)
 7. 线程中的 wait()和 sleep()方法有什么区别？![](../images/猕猴桃.png)
