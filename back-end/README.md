@@ -26,72 +26,90 @@
 12. Java类初始化顺序 `@B`![](../images/柠檬.png)
 13. Java 类的加载流程是怎样的？什么是双亲委派机制？@B![](../images/柠檬.png)
 14. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？@B![](../images/柠檬.png)
-15. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
-16. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
-17. CAS 实现原理是什么？@C![](../images/西瓜.png)
-18. 成员变量和方法的区别？@C![](../images/西瓜.png)
-19. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
-20. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
-21. final 内存语义？什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
-22. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
-23. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
-24. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
-25. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
-26. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
-27. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
-28. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
-29. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
-30. 简述 Java的反射机制    @E![](../images/葡萄.png)
-31. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
-32. 简述使用协程的优点@E![](../images/葡萄.png)
-33. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
+15. char 型变量中能不能存贮一个中文汉字，为什么？![](../images/柠檬.png)
+16. 你对String对象的intern()熟悉么?![](../images/柠檬.png)
+17. java 创建对象的几种方式![](../images/柠檬.png)
+18. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
+19. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
+20. CAS 实现原理是什么？@C![](../images/西瓜.png)
+21. 成员变量和方法的区别？@C![](../images/西瓜.png)
+22. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
+23. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
+24. final 内存语义？final有哪些用法，什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
+25. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
+26. Collections.sort和Arrays.sort的实现原理@D![](../images/牛油果.png)
+27. poll()方法和 remove()方法的区别？@D![](../images/牛油果.png)
+28. private修饰的方法可以通过反射访问，那么private的意义是什么@D![](../images/牛油果.png)
+29. String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么@D![](../images/牛油果.png)
+30. short s1=1; s1 = s1 + 1;该段代码是否有错,有的话怎么改？short s1=1; s1 += 1; 该段代码是否有错,有的话怎么改？![](../images/牛油果.png)
+31. int 和Integer谁占用的内存更多?![](../images/牛油果.png)
+32. a=a+b与a+=b有什么区别吗?![](../images/牛油果.png)
+33. a.hashCode()有什么用?与a.equals(b)有什么关系,equals()和hashcode的区别![](../images/牛油果.png)
+34. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
+35. 一个java文件有3个类，编译后有几个class文件@E![](../images/葡萄.png)
+36. int a = 1; 是原子性操作吗@E![](../images/葡萄.png)
+37. 简述 Java的反射机制    @E![](../images/葡萄.png)
+38. 简述 SortedSet 实现原理@E![](../images/葡萄.png)
+39. 简述使用协程的优点@E![](../images/葡萄.png)
+40. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
+41. 3*0.1==0.3返回值是什么![](../images/葡萄.png)
+42. Object中有哪些公共方法?![](../images/葡萄.png)
+43. Error vs Exception的区别![](../images/葡萄.png)
+44. try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?![](../images/葡萄.png)
+45. Java 语言如何进行异常处理，关键字：throws、throw、try、catch、finally 分别如何使用？![](../images/葡萄.png)
+46. 
 
 ##### Thread
 
-1. [Java创建线程的方式](thread/Thread.md) @F![](../images/猕猴桃.png)
+1. [Java创建线程的方式](多线程/线程/java创建线程的方式.md) @F![](../images/猕猴桃.png)
 2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
-3. Java线程的状态及转换@F![](../images/猕猴桃.png)
-4. 启动线程方法 start()和 run()有什么区别？
-5. 线程中的 wait()和 sleep()方法有什么区别？
-6. 为什么wait, notify 和 notifyAll这些方法不在thread类里面？
-7. 为什么wait和notify方法要在同步块中调用？
-8. 讲下join,yield方法的作用,以及什么场合用它们？
-9. 为什么Thread类的sleep()和yield()方法是静态的？
-10. 为什么Thread里面的大部分方法都是final的？
-11. 多线程同步有哪几种方法？
-12. 如何控制某个方法允许并发访问线程的大小？怎么控制同一时间只有 3 个线程运行？
-13. 什么是原子性、可见性、有序性？
-14. 一个线程运行时发生异常会怎样？
-15. 在线程中你怎么处理不可控制异常
-16. 为什么你应该在循环中检查等待条件?
-17. 多线程中的忙循环是什么?
-18. 线程 yield()方法有什么用？
-19. 线程 sleep(0)方法有什么用？
-20. 线程中断是否能直接调用stop,为什么?
-21. 怎么检测一个线程是否拥有锁？
-22. 不可变对象对多线程有什么帮助？
-23. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![](../images/芒果.png)
-24. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）@A![](../images/芒果.png)
-25. 什么是 FutureTask？@B![](../images/樱桃.png)
-26. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
-27. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
-28. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
-29. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
-30. CyclicBarrier 和 CountDownLatch 的区别？
-31. Fork/Join 框架是干什么的？
-32. 常用的线程池模式以及不同线程池的使用场景？
-33. BlockingQueue的原理是什么
-34. 如何确保N个线程可以访问N个资源同时又不导致死锁？
-35. 如何写代码来解决生产者消费者问题？
-36. 你如何确保main()方法所在的线程是Java程序最后结束的线程？
-37. 同步方法和同步块，哪个是更好的选择？
-38. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律
-39. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好
-40. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？
-41. 如何用Java实现阻塞队列
-42. 用Java编程一个会导致死锁的程序，你将怎么解决？
-43. 你将如何使用thread dump？你将如何分析Thread dump？
-44. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。
+3. 编写两个线程，一个线程打印1~25，另一个线程打印字母A~Z，打印顺序为12A34B56C……5152Z，要求使用线程间的通信。![](../images/猕猴桃.png)
+4. [Java 线程的状态及转换](多线程/线程/java线程的状态及转换.md) ![](../images/猕猴桃.png)
+5. 在线程中你怎么处理异常？![](../images/猕猴桃.png)
+6. 启动线程方法 start()和 run()有什么区别？![](../images/猕猴桃.png)
+7. 线程中的 wait()和 sleep()方法有什么区别？![](../images/猕猴桃.png)
+8. 为什么wait, notify 和 notifyAll这些方法不在thread类里面？![](../images/猕猴桃.png)
+9. 为什么wait和notify方法要在同步块中调用？![](../images/猕猴桃.png)
+10. 讲下join,yield方法的作用,以及什么场合用它们？![](../images/猕猴桃.png)
+11. 为什么Thread类的sleep()和yield()方法是静态的？![](../images/猕猴桃.png)
+12. sleep、yield、wait、join的区别🌰
+13. sleep、wait、park、Condition 都能让线程等待，有什么区别？🌰
+14. 为什么Thread里面的大部分方法都是final的？🌰
+15. 多线程同步有哪几种方法？🌰
+16. 如何控制某个方法允许并发访问线程的大小？怎么控制同一时间只有 3 个线程运行？🌰
+17. 什么是原子性、可见性、有序性？🌰
+18. 一个线程运行时发生异常会怎样？🌰
+19. 在线程中你怎么处理不可控制异常🌰
+20. 为什么你应该在循环中检查等待条件？🐡
+21. 多线程中的忙循环是什么?🐡
+22. 线程 yield()方法有什么用？🐡
+23. 线程 sleep(0)方法有什么用？🐡
+24. 线程中断是否能直接调用stop,为什么?🐡
+25. 怎么检测一个线程是否拥有锁？🐡
+26. 不可变对象对多线程有什么帮助？🐡
+27. 什么是 FutureTask？@B![](../images/樱桃.png)
+28. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
+29. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
+30. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
+31. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
+32. CyclicBarrier 和 CountDownLatch 的区别？![](../images/樱桃.png)
+33. Fork/Join 框架是干什么的？![](../images/樱桃.png)
+34. 常用的线程池模式以及不同线程池的使用场景？![](../images/樱桃.png)
+35. BlockingQueue的原理是什么![](../images/樱桃.png)
+36. 如何确保N个线程可以访问N个资源同时又不导致死锁？![](../images/樱桃.png)
+37. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
+38. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）![](../images/芒果.png)
+39. 如何写代码来解决生产者消费者问题？![](../images/芒果.png)
+40. 你如何确保main()方法所在的线程是Java程序最后结束的线程？![](../images/芒果.png)
+41. 同步方法和同步块，哪个是更好的选择？![](../images/芒果.png)
+42. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律![](../images/芒果.png)
+43. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好![](../images/芒果.png)
+44. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？🍈
+45. 如何用Java实现阻塞队列🍈
+46. 用Java编程一个会导致死锁的程序，你将怎么解决？🍈
+47. 你将如何使用thread dump？你将如何分析Thread dump？🍈
+48. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？🍈
+49. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。🍈
 
 ##### Lock
 
@@ -99,37 +117,36 @@
 2. 为什么Java中 wait 方法需要在 synchronized 的方法中调用？@C![](../images/红心柚.png)
 3. 为什么 wait，notify 和 notifyAll 是在 Object 类中定义的而不是在 Thread 类中定义@C![](../images/红心柚.png)
 4. 简述 Synchronized，volatile，可重入锁的不同使用场景及优缺点@C![](../images/红心柚.png)
-5. volitile的内存语义，底层如何实现，为什么不能保证原子性@C![](../images/红心柚.png)
-6. Java 常见锁有哪些？ReetrantLock 是怎么实现的？@D🍐
-7. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。@D🍐
-8. 阻塞队列的实现，ArrayBlockingQueue的底层实现？@D🍐
-9. AQS 中独占锁和共享锁的操作流程大体描述一下@D🍐
-10. 重入锁有什么好处，什么时候考虑用   @D🍐
-11. 读写锁有什么好处，什么时候考虑用？读锁是什么类型的锁，写锁呢？🍐
-12. 说下读写锁里的锁降级流程，什么时候可以考虑用这个机制🍌
-13. park 方法是怎么实现的🍌
-14. 锁的等待通知机制 Condition 是怎么实现的，有了线程的等待通知机制为什么还要设计 Condition？🍌
-15. 死锁怎么产生的，如何避免，自己写一个死锁🍌
-16. 说说 Java 中有哪些锁🍌
-17. sleep、wait、park、Condition 都能让线程等待，有什么区别？🍌
-18. 阻塞和非阻塞有什么区别，他们可以用什么方式实现🎈
-19. 队列（Queue）提供哪些操作🎈
-20. 阻塞队列提供了哪些获取元素的方法，有什么区别？🎈
-21. 阻塞队列有哪些实现？为什么要分有界无界？🎈
-22. CountDownLatch 怎么实现的，什么时候考虑用？🎈
-23. CyclicBarrier 怎么实现的，什么时候考虑用？🎈
-24. Semaphore 怎么实现的，什么时候考虑用？🎈
-25. Semaphore拿到执行权的线程之间是否互斥🎈
-26. fork/join 框架是什么？🍑
-27. ReadWriteLock读写之间互斥吗🍑
-28. synchronized 关键字底层是如何实现的？它与 Lock 相比优缺点分别是什么？🍑
-29. JUC包下对哪些类了解，synchronized和JDK提供的锁区别；🍑
-30. CAS原理，ABA问题；🍑
-31. ReentranLock与sychronized的区别🍑
+5. synchronized 关键字底层是如何实现的？原理？它与 Lock 相比优缺点分别是什么？![](../images/红心柚.png)
+6. JUC包下对哪些类了解，synchronized和JDK提供的锁区别![](../images/红心柚.png)
+7. ReentranLock与sychronized的区别![](../images/红心柚.png)
+8. volitile的内存语义，底层如何实现，为什么不能保证原子性@C![](../images/红心柚.png)
+9. Java 常见锁有哪些？ReetrantLock 是怎么实现的？@D🍐
+10. JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。@D🍐
+11. 阻塞队列的实现，ArrayBlockingQueue的底层实现？@D🍐
+12. 介绍一下AQS 🍐
+13. AQS 中独占锁和共享锁的操作流程大体描述一下@D🍐
+14. 重入锁有什么好处，什么时候考虑用   @D🍐
+15. 读写锁有什么好处，什么时候考虑用？读锁是什么类型的锁，写锁呢？🍐
+16. 说下读写锁里的锁降级流程，什么时候可以考虑用这个机制🍌
+17. park 方法是怎么实现的🍌
+18. 锁的等待通知机制 Condition 是怎么实现的，有了线程的等待通知机制为什么还要设计 Condition？🍌
+19. 死锁怎么产生的，如何避免，自己写一个死锁🍌
+20. 说说 Java 中有哪些锁🍌
+21. 阻塞和非阻塞有什么区别，他们可以用什么方式实现🎈
+22. 队列（Queue）提供哪些操作🎈
+23. 阻塞队列提供了哪些获取元素的方法，有什么区别？🎈
+24. 阻塞队列有哪些实现？为什么要分有界无界？🎈
+25. CountDownLatch 怎么实现的，什么时候考虑用？🎈
+26. CyclicBarrier 怎么实现的，什么时候考虑用？🎈
+27. Semaphore 怎么实现的，什么时候考虑用？🎈
+28. Semaphore拿到执行权的线程之间是否互斥🎈
+29. fork/join 框架是什么？🍑
+30. ReadWriteLock读写之间互斥吗🍑
+31. CAS原理，ABA问题；🍑
 32. 什么是公平锁？什么是非公平锁？🍑
-33. Java中活锁和死锁有什么区别？
-    什么是乐观锁和悲观锁
-34. 
+33. Java中活锁和死锁有什么区别？🍑
+34. 什么是乐观锁和悲观锁🍑
 
 
 

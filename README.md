@@ -3,8 +3,8 @@
 
 
 
--  [前端分享参考列表](front-end/share-list.md)
--  [后端分享参考列表](back-end/share-list.md)
+-  [前端分享参考列表](front-end/README.md)
+-  [后端分享参考列表](back-end/README.md)
 
 
 
