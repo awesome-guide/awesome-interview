@@ -12,7 +12,7 @@
 
 ##### jdk
 
-1. HashMap 与 ConcurrentHashMap 的实现原理是怎样的？ConcurrentHashMap 是如何保证线程安全的？![](../images/草莓.png)
+1. [HashMap 与 ConcurrentHashMap 的实现原理是怎样的？](集合/HashMap.md)[ConcurrentHashMap 是如何保证线程安全的？](集合/CurrentHashMap.md)![](../images/草莓.png)
 2. HashMap底层实现，为什么扩容是2的幂次；为什么是0.75f，1.7与1.8的区别 `@A`![](../images/草莓.png)
 3. hashmap 和 hashtable 的区别是什么？`@A`![](../images/草莓.png)
 4. HashMap 实现原理，为什么使用红黑树？`@A`![](../images/草莓.png)
