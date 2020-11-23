@@ -27,17 +27,17 @@ parseInt('3',2) 进制数为 2，但表示的数中只能含 0 或者 1，表示
 
 防抖：触发高频事件后 n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间
 function debounce(fn,time) {
-let timeout = null; // 存放延时器
-return function () {
-clearTimeout(timeout); // 每次触发这个函数，都会清除延时器
-timeout = setTimeout(() => { // 然后又创建一个新的 setTimeout, 这样就能保证输入字符后的 interval 间隔内如果还有字符输入的话，就不会执行 fn 函数
-fn.apply(this, arguments);
-}, time);
-};
-}
-function sayHi() {
-console.log('防抖成功');
-}
+&emsp;let timeout = null; // 存放延时器
+&emsp;return function () {
+&emsp;clearTimeout(timeout); // 每次触发这个函数，都会清除延时器
+&emsp;timeout = setTimeout(() => { // 然后又创建一个新的 setTimeout, 这样就能保证输入字符后的 interval 间隔内如果还有字符输入的话，就不会执行 fn 函数
+&emsp;fn.apply(this, arguments);
+&emsp;}, time);
+&emsp;};
+&emsp;}
+&emsp;function sayHi() {
+&emsp;console.log('防抖成功');
+&emsp;}
 
 var inp = document.getElementById('inp');
 inp.addEventListener('input', debounce(sayHi,500)); // 防抖
