@@ -132,13 +132,23 @@
 
 第 56 题：要求设计 LazyMan 类，实现以下功能。
 
+解析：[56 题](https://github.com/hanyueqiang/frontEnd_book/issues/12)
+
 第 57 题：分析比较 opacity: 0、visibility: hidden、display: none 优劣和适用场景。
+
+解析：[57 题](https://github.com/hanyueqiang/frontEnd_book/issues/13)
 
 第 58 题：箭头函数与普通函数（function）的区别是什么？构造函数（function）可以使用 new 生成实例，那么箭头函数可以吗？为什么？
 
+解析：[58 题](https://github.com/hanyueqiang/frontEnd_book/issues/14)
+
 第 59 题：给定两个数组，写一个方法来计算它们的交集。
 
+解析：[59 题](https://github.com/hanyueqiang/frontEnd_book/issues/15)
+
 第 60 题：已知如下代码，如何修改才能让图片宽度为 300px ？注意下面代码不可修改。
+
+解析：[60 题](https://github.com/hanyueqiang/frontEnd_book/issues/16)
 
 第 61 题：介绍下如何实现 token 加密
 
