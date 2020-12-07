@@ -61,14 +61,14 @@
 
 ##### Thread
 
-1. [Java创建线程的方式](多线程/线程/java创建线程的方式.md) @F![](../images/猕猴桃.png)
+1. [Java创建线程的方式](多线程&&并发/线程/java创建线程的方式.md) @F![](../images/猕猴桃.png)
 2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
 3. 编写两个线程，一个线程打印1~25，另一个线程打印字母A~Z，打印顺序为12A34B56C……5152Z，要求使用线程间的通信。![](../images/猕猴桃.png)
-4. [Java 线程的状态及转换](多线程/线程/java线程的状态及转换.md) ![](../images/猕猴桃.png)
-5. 在线程中你怎么处理异常？![](../images/猕猴桃.png)
+4. [Java 线程的状态及转换](多线程&&并发/线程/java线程的状态及转换.md) ![](../images/猕猴桃.png)
+5. [在线程中你怎么处理异常？](多线程&&并发/线程/在线程中你怎么处理异常.md)![](../images/猕猴桃.png)
 6. 启动线程方法 start()和 run()有什么区别？![](../images/猕猴桃.png)
-7. 线程中的 wait()和 sleep()方法有什么区别？![](../images/猕猴桃.png)
-8. 为什么wait, notify 和 notifyAll这些方法不在thread类里面？![](../images/猕猴桃.png)
+7. [线程中的 wait()和 sleep()方法有什么区别？](多线程&&并发/线程/线程中的 wait()和 sleep()方法有什么区别？)![](../images/猕猴桃.png)
+8. [为什么wait, notify 和 notifyAll这些方法不在thread类里面？](多线程&&并发/线程/为什么wait, notify 和 notifyAll这些方法不在thread类里面？.md)![](../images/猕猴桃.png)
 9. 为什么wait和notify方法要在同步块中调用？![](../images/猕猴桃.png)
 10. 讲下join,yield方法的作用,以及什么场合用它们？![](../images/猕猴桃.png)
 11. 为什么Thread类的sleep()和yield()方法是静态的？![](../images/猕猴桃.png)
