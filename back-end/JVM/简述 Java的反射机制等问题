@@ -1,0 +1,376 @@
+- ## 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计
+
+  ​		对于局部变量而言，赋值和取值访问顺序是确定的，**这样设计是一种约束**。尽最大程度减少使用者犯错的可能。假使局部变量可以使用默认值，可能总会无意间忘记赋值，进而导致不可预期的情况出现。
+
+  ​		成员变量可以不初始化，在类加载过程准备阶段会赋予默认值，但局部变量使用前需要显式赋值，对于成员变量而言，其赋值和取值访问的先后顺序具有不确定性，编译器无法确定是在方法调用前赋值还是在调用后赋值还是在运行时赋值。
+
+  
+
+- ## 一个java文件有3个类，编译后有几个class文件
+
+  ​		java程序的源文件扩展名为java。在编译源文件之后，产生的是字节码文件，其扩展名为．class。而对于源文件中定义的一个类都会有一个字节码文件与之对应，并且扩展名均为．class，这里有3个类，因此有3个字节码文件
+
+  
+
+- ## int a = 1; 是原子性操作吗
+
+  ​	【原子操作定义】
+
+  ​		所谓原子操作是指不会被[线程调度](https://baike.baidu.com/item/线程调度/10226112)机制打断的操作；这种操作一旦开始，就一直运行到结束，中间不会有任何 context switch （切换到另一个线程）。也可以这样理解：如果这个操作所处的层(layer)的更高层不能发现其内部实现与结构，那么这个操作是一个原子(atomic)操作。原子操作可以是一个步骤，也可以是多个操作步骤，但是其顺序不可以被打乱，也不可以被切割而只执行其中的一部分。将整个操作视作一个整体是原子性的核心特征。
+
+  原子（atomic）本意是“不能被进一步分割的最小粒子”，而原子操作（atomic operation）意为“**不可被中断的一个或一系列操作**”。
+
+  在本例中：**是原子性操作**
+
+  1 a作为类的成员变量，存放于方法区中；1保存在堆(Heap)的实例中  
+  2 a作为方法局部变量，存放于Java虚拟机栈(JVM Stacks)的局部变量表中；1也保存在栈内存中。
+
+  
+
+- ### 简述 Java的反射机制 
+
+  #### 什么是反射机制？
+
+  1、在运行状态中，对于任意一个类，都能够知道这个类的属性和方法。
+  2、对于任意一个对象，都能够调用它的任何方法和属性。这种动态获取信息以及动态调用对象的方法的功能称为JAVA的反射。
+
+  #### 反射的作用
+
+  1、在运行时判断任意一个对象所属的类；
+  2、在运行时构造任意一个类的对象；
+  3、在运行时判断任意一个类所具有的成员变量和方法；
+  4、在运行时调用任意一个对象的方法；生成动态代理。
+
+  #### 反射的原理
+
+  反射的实现主要借助以下四个类：Class、Constructor、Field、Method ；
+  1、通过Class类获取类对象的三种方法：
+  第一种：通过类名获得:Class<?> class = *ClassName*.class;
+  第二种：通过类名全路径获得：Class<?> class = Class.forName(“类名全路径”);
+  第三种：通过实例对象获得：Class<?> class = object.getClass();
+
+  2、通过Class类获取实现类实例化：
+        1)Object o = (Object) c.newInstance() ; (其中c为Class类的实例化对象）
+
+  ​      2)指定的所有公共构方法中的一种
+
+  ```java
+  Class clazz = NluHelper.class;
+  Constructor constructor=clazz.getConstructor(String.class);
+  constructor.newInstance("张三");
+  ```
+
+  ​	3)指定当前class构造方法中的一种
+
+  ```java
+  Class clazz = NluHelper.class;
+  Constructor constructor=clazz.getDeclaredConstructor(String.class);
+  constructor.newInstance("张三");
+  ```
+
+  ​	4)获取当前类所有构造方法及其属性
+
+  ```java
+  Class clazz = NluHelper.class;
+          Constructor[] constructors = clazz.getDeclaredConstructors();
+          for (Constructor c : constructors) {
+              System.out.println(c.getName());
+              Class params[] = c.getParameterTypes();
+              for (Class param:params){
+                  System.out.println(param.getName());
+              }
+          }
+  ```
+
+  
+
+  3、获取类中的构造方法：![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161343451-803699800.png)![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161408982-698240323.png)
+  4、获取类中的属性：
+
+  ![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161735389-1882210002.png)
+  ![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161755498-1621406504.png)
+
+  5、获取类中的方法：
+
+  ![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161823873-503164825.png)
+  ![在这里插入图片描述](https://images2015.cnblogs.com/blog/831179/201703/831179-20170311161907357-844512641.png)
+
+  #### 反射的使用场景
+
+  -   Java编码时知道类和对象的具体信息，此时直接对类和对象进行操作即可，无需反射
+  -   如果编码时不知道类或者对象的具体信息，此时应该使用反射来实现
+
+  ​      比如类的名称放在XML文件中，属性和属性值放在XML文件中，需要在运行时读取XML文件，动态获取类的信息
+  ​      在编译时根本无法知道该对象或类可能属于哪些类，程序只依靠运行时信息来发现该对象和类的真实信息
+
+  
+
+  
+
+- ## 简述 SortedSet 实现原理
+
+  <img src="https://img2020.cnblogs.com/blog/1102083/202008/1102083-20200804221603127-819017688.png" alt="img" style="zoom: 50%;" />
+
+- **功能说明：**
+
+  ​		该接口扩展了 Set 接口并提供了元素的排序功能。插入的元素需实现Comparable接口（或者被指定的Comparator接受）并可以互相比较。例：e1.compareTo(e2)（或 comparator.compare(e1, e2)）
+
+  ​		TreeSet的实现了该接口，字符串、数字、日期等底层已默认实现了Comparable接口，故在添加后可直接按顺序排列
+
+  **类支持排序实现方式：**
+
+  ​		1、该类实现Comparator接口并实现compare方法（见例1）
+
+  ​		2、单建一个实现类（比较器）SortedSet构造时传入该类（见例2）
+
+  **例1：**
+
+  ```java
+  import java.util.*;
+  public class SortedSetTest02{
+   public static void main(String[] args){
+     SortedSet users=new TreeSet();
+     User u1=new User(12);
+     User u2=new User(16);
+     User u3=new User(23);
+     User u4=new User(32);
+     User u5=new User(43);
+     
+     users.add(u1);
+     users.add(u2);
+     users.add(u3);
+     users.add(u4);
+     users.add(u5);
+     Iterator it=users.iterator();
+     while(it.hasNext()){
+       System.out.println(it.next());
+     }
+   }
+  }
+  class User implements Comparable{
+   int age;
+   User(int age){
+     this.age=age;
+   }
+   public String toString(){
+     return "User[age="+age+"]";
+   }
+   //实现java.lang.Comparable;接口中的compareTo方法
+   //该方法程序员负责实现，SUN提供的程序已经调用了该方法
+   //需求：按照User的年龄排序
+   public int compareTo(Object o){  //u1.compareTo(u2)
+     //编写一个比较规则
+     int age1=this.age;   
+     int age2=((User)o).age;
+     return age1-age2;
+   }
+  }
+  ```
+
+  **例2：**
+
+  ```java
+  import java.util.*;
+  public class SortedSetTest03{
+   public static void main(String[] args){
+     //创建TreeSet集合的时候提供一个比较器
+     SortedSet products=new TreeSet(new ProductComparator());
+     Product p1=new Product(3.4);
+     Product p2=new Product(4.0);
+     Product p3=new Product(3.6);
+     Product p4=new Product(7.6);
+     Product p5=new Product(3.7);
+     
+     products.add(p1);
+     products.add(p2);
+     products.add(p3);
+     products.add(p4);
+     products.add(p5);
+     
+     Iterator it=products.iterator();
+     while(it.hasNext()){
+       System.out.println(it.next());
+       }
+   }
+  }
+  class Product{
+   double price;
+   Product(double price){
+     this.price=price;
+   }
+   public String toString(){
+     return price + "";
+   }
+  }
+  //单独编写一个比较器
+  class ProductComparator implements Comparator{
+   //需求：按照商品价格排序
+   public int compare(Object o1,Object o2){
+     double price1=((Product)o1).price;
+     double price2=((Product)o2).price;
+     if (price1==price2){
+       return 0;
+     }else if(price1>price2){
+       return -1;
+     }
+     return 1;
+   }
+  }
+  ```
+
+  **查看源码看它在添加时是如何实现自动排序与去重的**
+
+  ​	1、**SortedSet sortSet=new TreeSet()**
+
+  ```java
+  private transient NavigableMap<E,Object> m;
+  private static final Object PRESENT = new Object();
+  
+  public TreeSet() {
+          this(new TreeMap<E,Object>());
+  }
+  TreeSet(NavigableMap<E,Object> m) {
+          this.m = m;
+  }
+  ```
+
+  ​	2、**sortSet.add("a");**
+
+  ```java
+  public boolean add(E e) {
+          return m.put(e, PRESENT)==null;
+   }
+  
+  ```
+
+  ​	**接着来看下put，这里看TreeMap**
+
+  ```java
+  public V put(K key, V value) {
+          Entry<K, V> t = root;
+      	//根节点为空则将当前设置为根节点
+          if (t == null) {
+              compare(key, key); // type (and possibly null) check
+  
+              root = new Entry<>(key, value, null);
+              size = 1;
+              modCount++;
+              return null;
+          }
+          int cmp;
+          Entry<K, V> parent;
+          // 进行比较若key值相同则直接赋值返回；获取key的父节点
+          Comparator<? super K> cpr = comparator;
+          if (cpr != null) {
+              do {
+                  parent = t;
+                  cmp = cpr.compare(key, t.key);
+                  if (cmp < 0)
+                      t = t.left;
+                  else if (cmp > 0)
+                      t = t.right;
+                  else
+                      return t.setValue(value);
+              } while (t != null);
+          } else {
+              if (key == null)
+                  throw new NullPointerException();
+              @SuppressWarnings("unchecked")
+              Comparable<? super K> k = (Comparable<? super K>) key;
+              do {
+                  parent = t;
+                  cmp = k.compareTo(t.key);
+                  if (cmp < 0)
+                      t = t.left;
+                  else if (cmp > 0)
+                      t = t.right;
+                  else
+                      return t.setValue(value);
+              } while (t != null);
+          }
+          Entry<K, V> e = new Entry<>(key, value, parent);
+          if (cmp < 0)
+              parent.left = e;
+          else
+              parent.right = e;
+      	// 对插入的节点进行调整
+          fixAfterInsertion(e);
+          size++;
+          modCount++;
+          return null;
+      }
+  ```
+
+  ```java
+  //使用自身对象还是比较器
+  final int compare(Object k1, Object k2) {
+          return comparator == null ? ((Comparable<? super K>) k1).compareTo((K) k2)
+                  : comparator.compare((K) k1, (K) k2);
+      }
+  ```
+
+  **注意事项：**
+
+  1、SortedSet 是“根据对象的比较顺序”，而不是“插入顺序”进行排序.
+
+  2、SortedSet 的实现不是同步的，不是线程安全的
+
+  3、SortedSet 允许 null 元素.
+
+  4、SortedSet 的实现类 TreeSet 将使用其 compareTo（或 compare）方法执行所有的键比较，认为两个对象的键相等就表示它们两个对象是相等的。它违背了 Set 接口的常规协定。
+
+  5、SortedSet 的 iterator 方法返回的迭代器是快速失败的
+
+  在创建迭代器之后，如果对集合进行修改， 除非通过迭代器自身的 remove 方法，否则在任何时间以任何方式对其进行修改， Iterator 都将抛出 ConcurrentModificationException
+
+  6、iterator() 返回的迭代器，里面的元素是以升序排序的
+
+  7、当试图添加一个重复元素到TreeSet时，新元素并不会把旧元素替换掉，
+  而只是新元素不会添加到TreeSet（不会抛异常。）
+
+  8、 TreeSet 用红黑树的数据结构来为元素排序
+
+  
+
+- ## 简述使用协程的优点
+
+  ##### 什么是协程
+
+  ​		协程是比线程更小的一种执行单元，你可以认为是轻量级的线程，协程解决了线程的两个问题：**一是系统线程会占用非常多的内存空间，二是过多的线程切换会占用大量的系统时间。**
+
+  ​		协程运行在线程之上，当一个协程执行完成后，可以选择主动让出，让另一个协程运行在当前线程之上。**协程并没有增加线程数量，只是在线程的基础之上通过分时复用的方式运行多个协程**，而且协程的切换在用户态完成，切换的代价比线程从用户态到内核态的代价小很多。
+
+  ​		协程只有和**异步IO**结合起来才能发挥出最大的威力。
+
+  ##### 优点
+
+  ​	协程是进程和线程的升级版,进程和线程都面临着内核态和用户态的切换问题而耗费许多切换时间，而协程就是用户自己控制切换的时机,不再需要陷入系统的内核态。
+
+  ​	协程的执行效率非常高。因为子程序切换不是线程切换，而是由程序自身控制。因此，没有线程切换的开销，和多线程相比，线程数量越多，相同数量的协程体现出的优势越明显
+
+  ​	不需要多线程的锁机制。由于只有一个线程，也不存在同时写变量的冲突，在协程中控制共享资源不需要加锁，只需要判断数据的状态，所以执行效率远高于线程 ，对于多核CPU可以使用**多进程+协程**来尽可能高效率地利用CPU。
+
+  ##### 应用场景
+
+  ​	协程的应用场景主要在于 ：I/O 密集型任务。
+
+  ##### java支持
+
+  ​	暂没有原生支持，开源模拟协程地址 ：https://github.com/kilim/kilim
+
+  ##### Go例子
+
+  ```go
+  func Add(x, y int) {
+      z := x + y
+      fmt.Println(z)
+  }
+   
+  func main() {
+      for i:=0; i<10; i++ {
+          go Add(i, i)
+      }
+  }
+  ```
+
+  
