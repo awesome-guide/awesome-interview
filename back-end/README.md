@@ -61,17 +61,17 @@
 
 ##### Thread
 
-1. [Java创建线程的方式](多线程&&并发/线程/java创建线程的方式.md) @F![](../images/猕猴桃.png)
-2. Java 线程间有多少通信方式？@F![](../images/猕猴桃.png)
+1. [Java创建线程的方式](多线程&&并发/线程/1.java创建线程的方式.md) @F![](../images/猕猴桃.png)
+2. [Java 线程间有多少通信方式？](多线程&&并发/线程/3.线程的通信方式)@F![](../images/猕猴桃.png)
 3. 编写两个线程，一个线程打印1~25，另一个线程打印字母A~Z，打印顺序为12A34B56C……5152Z，要求使用线程间的通信。![](../images/猕猴桃.png)
-4. [Java 线程的状态及转换](多线程&&并发/线程/java线程的状态及转换.md) ![](../images/猕猴桃.png)
+4. [Java 线程的状态及转换](多线程&&并发/线程/2.java线程的状态及转换.md) ![](../images/猕猴桃.png)
 5. [在线程中你怎么处理异常？](多线程&&并发/线程/在线程中你怎么处理异常.md)![](../images/猕猴桃.png)
-6. 启动线程方法 start()和 run()有什么区别？![](../images/猕猴桃.png)
 7. [线程中的 wait()和 sleep()方法有什么区别？](多线程&&并发/线程/线程中的 wait()和 sleep()方法有什么区别？)![](../images/猕猴桃.png)
 8. [为什么wait, notify 和 notifyAll这些方法不在thread类里面？](多线程&&并发/线程/为什么wait, notify 和 notifyAll这些方法不在thread类里面？.md)![](../images/猕猴桃.png)
-9. 为什么wait和notify方法要在同步块中调用？![](../images/猕猴桃.png)
-10. 讲下join,yield方法的作用,以及什么场合用它们？![](../images/猕猴桃.png)
-11. 为什么Thread类的sleep()和yield()方法是静态的？![](../images/猕猴桃.png)
+8. [为什么wait和notify方法要在同步块中调用？](多线程&&并发/线程/为什么wait和notify方法要在同步块中调用.md)![](../images/猕猴桃.png)
+9. [为什么wait()和notify()需要搭配synchonized关键字使用](多线程&&并发/线程/为什么wait()和notify()需要搭配synchonized关键字使用.md)
+10. [讲下join,yield方法的作用,以及什么场合用它们？](多线程&&并发/线程/讲下join,yield方法的作用,以及什么场合用它们.md)![](../images/猕猴桃.png)
+11. [为什么Thread类的sleep()和yield()方法是静态的](多线程&&并发/线程/为什么Thread类的sleep()和yield()方法是静态的.md)？![](../images/猕猴桃.png)
 12. Thread.sleep(0) 到底有什么用？![](../images/猕猴桃.png)
 13. sleep、yield、wait、join的区别🌰
 14. sleep、wait、park、Condition 都能让线程等待，有什么区别？🌰
@@ -83,34 +83,32 @@
 20. 在线程中你怎么处理不可控制异常🌰
 21. 为什么你应该在循环中检查等待条件？🐡
 22. 多线程中的忙循环是什么?🐡
-23. 线程 yield()方法有什么用？🐡
-24. 线程 sleep(0)方法有什么用？🐡
-25. 线程中断是否能直接调用stop,为什么?🐡
-26. 怎么检测一个线程是否拥有锁？🐡
-27. 不可变对象对多线程有什么帮助？🐡
-28. 什么是 FutureTask？@B![](../images/樱桃.png)
-29. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
-30. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
-31. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
-32. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
-33. CyclicBarrier 和 CountDownLatch 的区别？![](../images/樱桃.png)
-34. Fork/Join 框架是干什么的？![](../images/樱桃.png)
-35. 常用的线程池模式以及不同线程池的使用场景？![](../images/樱桃.png)
-36. BlockingQueue的原理是什么![](../images/樱桃.png)
-37. 如何确保N个线程可以访问N个资源同时又不导致死锁？![](../images/樱桃.png)
-38. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
-39. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）![](../images/芒果.png)
-40. 如何写代码来解决生产者消费者问题？![](../images/芒果.png)
-41. 你如何确保main()方法所在的线程是Java程序最后结束的线程？![](../images/芒果.png)
-42. 同步方法和同步块，哪个是更好的选择？![](../images/芒果.png)
-43. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律![](../images/芒果.png)
-44. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好![](../images/芒果.png)
-45. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？🍈
-46. 如何用Java实现阻塞队列🍈
-47. 用Java编程一个会导致死锁的程序，你将怎么解决？🍈
-48. 你将如何使用thread dump？你将如何分析Thread dump？🍈
-49. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？🍈
-50. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。🍈
+23. 线程中断是否能直接调用stop,为什么?🐡
+24. 怎么检测一个线程是否拥有锁？🐡
+25. 不可变对象对多线程有什么帮助？🐡
+26. 什么是 FutureTask？@B![](../images/樱桃.png)
+27. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
+28. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
+29. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
+30. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
+31. CyclicBarrier 和 CountDownLatch 的区别？![](../images/樱桃.png)
+32. Fork/Join 框架是干什么的？![](../images/樱桃.png)
+33. 常用的线程池模式以及不同线程池的使用场景？![](../images/樱桃.png)
+34. BlockingQueue的原理是什么![](../images/樱桃.png)
+35. 如何确保N个线程可以访问N个资源同时又不导致死锁？![](../images/樱桃.png)
+36. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
+37. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）![](../images/芒果.png)
+38. 如何写代码来解决生产者消费者问题？![](../images/芒果.png)
+39. 你如何确保main()方法所在的线程是Java程序最后结束的线程？![](../images/芒果.png)
+40. 同步方法和同步块，哪个是更好的选择？![](../images/芒果.png)
+41. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律![](../images/芒果.png)
+42. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好![](../images/芒果.png)
+43. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？🍈
+44. 如何用Java实现阻塞队列🍈
+45. 用Java编程一个会导致死锁的程序，你将怎么解决？🍈
+46. 你将如何使用thread dump？你将如何分析Thread dump？🍈
+47. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？🍈
+48. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。🍈
 
 ##### Lock
 
