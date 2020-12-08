@@ -11,7 +11,7 @@ Java中线程的状态分为6种。
 > 4. **等待(WAITING)**：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。
 >
 > 5. **超时等待(TIMED_WAITING)**：该状态不同于WAITING，它可以在指定的时间后自行返回。
-> 6. 终止(TERMINATED)**：表示该线程已经执行完毕。
+> 6. **终止(TERMINATED)**：表示该线程已经执行完毕。
 
 这6种状态定义在Thread类的State枚举中，可查看源码进行一一对应。
 
@@ -35,7 +35,7 @@ public enum State {
 
 实现Runnable接口和继承Thread可以得到一个线程类，new一个实例出来，线程就进入了初始状态。
 
-```jav
+```java
 private void testStateNew() {
     Thread thread = new Thread(() -> {});
     System.out.println(thread.getState()); // 输出 NEW 
@@ -53,7 +53,7 @@ private void testStateNew() {
 
 
 
-```
+```java
 public synchronized void start() {
     if (threadStatus != 0)
         throw new IllegalThreadStateException();
@@ -423,14 +423,14 @@ b线程状态仍然不固定（RUNNABLE或BLOCKED）。
 7. notifyAll()方法所在synchronized结束，线程5释放对象A的锁。
 8. 同步队列的线程争抢对象锁，但线程1什么时候能抢到就不知道了。 
 
-## 五、同步队列状态**
+## 五、同步队列状态
 
 - 当前线程想调用对象A的同步方法时，发现对象A的锁被别的线程占有，此时当前线程进入同步队列。简言之，同步队列里面放的都是想争夺对象锁的线程。
 - 当一个线程1被另外一个线程2唤醒时，1线程进入同步队列，去争夺对象锁。
 - 同步队列是在同步的环境下才有的概念，一个对象对应一个同步队列。
 - 线程等待时间到了或被notify/notifyAll唤醒后，会进入同步队列竞争锁，如果获得锁，进入RUNNABLE状态，否则进入BLOCKED状态等待获取锁。
 
-## 六、几个方法的比较**
+## 六、几个方法的比较
 
 1. Thread.sleep(long millis)，一定是当前线程调用此方法，当前线程进入TIMED_WAITING状态，但不释放对象锁，millis后线程自动苏醒进入就绪状态。作用：给其它线程执行机会的最佳方式。
 2. Thread.yield()，一定是当前线程调用此方法，当前线程放弃获取的CPU时间片，但不释放锁资源，由运行状态变为就绪状态，让OS再次选择线程。作用：让相同优先级的线程轮流执行，但并不保证一定会轮流执行。实际中无法保证yield()达到让步目的，因为让步的线程还有可能被线程调度程序再次选中。Thread.yield()不会导致阻塞。该方法与sleep()类似，只是不能由用户指定暂停多长时间。
@@ -442,4 +442,69 @@ b线程状态仍然不固定（RUNNABLE或BLOCKED）。
 ## **七、疑问**
 
 1. 等待队列里许许多多的线程都wait()在一个对象上，此时某一线程调用了对象的notify()方法，那唤醒的到底是哪个线程？随机？队列FIFO？or sth else？Java文档就简单的写了句：选择是任意性的（The choice is arbitrary and occurs at the discretion of the implementation）
+2. 易错点：有一个易错的地方，当调用t.sleep()的时候，会暂停线程t。这是不对的，因为Thread.sleep是一个静态方法，它会使当前线程而不是线程t进入休眠状态
 
+
+
+------
+
+
+
+
+
+1.sleep：Thread类的方法，必须带一个时间参数。**会让当前线程休眠进入阻塞状态并释放CPU（阿里面试题 Sleep释放CPU，wait 也会释放cpu，因为cpu资源太宝贵了，只有在线程running的时候，才会获取cpu片段）**，提供其他线程运行的机会且不考虑优先级，但如果有同步锁则sleep不会释放锁即其他线程无法获得同步锁 可通过调用interrupt()方法来唤醒休眠线程。
+
+ 
+
+2.yield：**让出CPU调度**，Thread类的方法，类似sleep只是**不能由用户指定暂停多长时间 ，**并且yield()方法**只能让同优先级的线程**有执行的机会。 yield()只是使当前线程重新回到可执行状态，所以执行yield()的线程有可能在进入**到可执行状态后**马上又被执行。调用yield方法只是一个建议，告诉线程调度器我的工作已经做的差不多了，可以让别的相同优先级的线程使用CPU了，没有任何机制保证采纳。
+
+ 
+
+3.wait：Object类的方法(notify()、notifyAll()  也是Object对象)，必须放在循环体和同步代码块中，执行该方法的线程会释放锁，进入线程等待池中等待被再次唤醒(notify随机唤醒，notifyAll全部唤醒，线程结束自动唤醒)即放入锁池中竞争同步锁
+
+ 
+
+4.join：一种特殊的wait，当前运行线程调用另一个线程的join方法，当前线程进入阻塞状态直到另一个线程运行结束等待该线程终止。 注意该方法也需要捕捉异常。
+
+
+
+```java
+public class LockSupportDemo {
+
+    public static Object u = new Object();
+    static ChangeObjectThread t1 = new ChangeObjectThread("t1");
+
+    public static class ChangeObjectThread extends Thread {
+
+        public ChangeObjectThread(String name) {
+            super(name);
+        }
+
+        @Override public void run() {
+            synchronized (u) {
+                System.out.println("in " + getName());
+                try {
+                    Thread.sleep(1000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                LockSupport.park();
+                if (Thread.currentThread().isInterrupted()) {
+                    System.out.println("被中断了");
+                }
+                System.out.println("继续执行");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        t1.start();
+        LockSupport.unpark(t1);
+        System.out.println("unpark invoked");
+    }
+}
+```
+
+
+
+![img](https://upload-images.jianshu.io/upload_images/845143-a18a625aba7a45ea.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)

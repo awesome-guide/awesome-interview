@@ -12,19 +12,19 @@
 
 第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
 
-解析：[1 题](./shareAnswer/share-1-4.md)
+解析：[1 题](./shareAnswer/React&Vue项目时为什么要在列表组件中写key.md)
 
 第 2 题：['1', '2', '3'].map(parseInt) what & why ?
 
-解析：[2 题](./shareAnswer/share-1-4.md)
+解析：[2 题](./shareAnswer/数组.map(parseInt)-what&why.md)
 
 第 3 题：什么是防抖和节流？有什么区别？如何实现？
 
-解析：[3 题](./shareAnswer/share-1-4.md)
+解析：[3 题](./shareAnswer/什么是防抖和节流？有什么区别？如何实现.md)
 
 第 4 题：介绍下 Set、Map、WeakSet 和 WeakMap 的区别？
 
-解析：[4 题](./shareAnswer/share-1-4.md)
+解析：[4 题](./shareAnswer/介绍下Set、Map、WeakSet和WeakMap的区别.md)
 
 第 5 题：介绍下深度优先遍历和广度优先遍历，如何实现？
 
@@ -160,21 +160,39 @@
 
 第 61 题：介绍下如何实现 token 加密
 
+解析：[61 题](https://github.com/hanyueqiang/frontEnd_book/issues/17)
+
 第 62 题：redux 为什么要把 reducer 设计成纯函数
+
+解析：[62 题](https://github.com/hanyueqiang/frontEnd_book/issues/18)
 
 第 63 题：如何设计实现无缝轮播
 
+解析：[63 题](https://github.com/hanyueqiang/frontEnd_book/issues/24)
+
 第 64 题：模拟实现一个 Promise.finally
+
+解析：[64 题](https://github.com/hanyueqiang/frontEnd_book/issues/23)
 
 第 65 题： a.b.c.d 和 a['b']['c']['d']，哪个性能更高？
 
+解析：[65 题](https://github.com/hanyueqiang/frontEnd_book/issues/19)
+
 第 66 题：ES6 代码转成 ES5 代码的实现思路是什么
+
+解析：[66 题](https://github.com/hanyueqiang/frontEnd_book/issues/20)
 
 第 67 题：数组编程题
 
+解析：[67 题](https://github.com/hanyueqiang/frontEnd_book/issues/21)
+
 第 68 题： 如何解决移动端 Retina 屏 1px 像素问题
 
+解析：[68 题](https://github.com/hanyueqiang/frontEnd_book/issues/22)
+
 第 69 题： 如何把一个字符串的大小写取反（大写变小写小写变大写），例如 ’AbC' 变成 'aBc' 。
+
+解析：[69 题](https://github.com/hanyueqiang/frontEnd_book/issues/25)
 
 第 70 题： 介绍下 webpack 热更新原理，是如何做到在不刷新浏览器的前提下更新页面的
 
