@@ -9,9 +9,9 @@
 ##### jdk
 
 1. [HashMap 与 ConcurrentHashMap 的实现原理是怎样的？](集合/HashMap.md)[ConcurrentHashMap 是如何保证线程安全的？](集合/CurrentHashMap.md)![](../images/草莓.png)
-2. HashMap底层实现，为什么扩容是2的幂次；为什么是0.75f，1.7与1.8的区别 `@A`![](../images/草莓.png)
-3. hashmap 和 hashtable 的区别是什么？`@A`![](../images/草莓.png)
-4. HashMap 实现原理，为什么使用红黑树？`@A`![](../images/草莓.png)
+2. [HashMap底层实现，为什么扩容是2的幂次](集合/HashMap为什么扩容是2的幂次.md)；[为什么是0.75f](集合/HashMap负载因子为什么是0.75f)，[1.7与1.8的区别](集合/HashMap1.7与1.8的区别.md) `@A`![](../images/草莓.png)
+3. [hashmap 和 hashtable 的区别是什么？](集合/hashmap和hashtable的区别是什么.md)`@A`![](../images/草莓.png)
+4. [HashMap 实现原理，为什么使用红黑树？](集合/HashMap实现原理，为什么使用红黑树.md)`@A`![](../images/草莓.png)
 5. ArrayList集合加入1万条数据，应该怎么提高效率`@A`![](../images/草莓.png)
 6. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决 `@A`![](../images/草莓.png)
 7. 简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度@A![](../images/草莓.png)
