@@ -1,10 +1,6 @@
 ## 后端技术栈分享内容参考列表
 
-
-
 [TOC]
-
-
 
 ### 基础知识
 
@@ -19,17 +15,17 @@
 5. ArrayList集合加入1万条数据，应该怎么提高效率`@A`![](../images/草莓.png)
 6. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决 `@A`![](../images/草莓.png)
 7. 简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度@A![](../images/草莓.png)
-8. [为什么 char 数组比 Java 中的 String 更适合存储密码？](JVM/String为什么不可变.md#为什么char数组比Java中的String更适合存储密码) `@B`![](../images/柠檬.png)
-9. [为什么 String 在 Java 中是不可变的？](JVM/String为什么不可变.md#为什么String在Java中是不可变的) `@B` ![](../images/柠檬.png)
-10. [你对String对象的intern()熟悉么?](JVM/String为什么不可变.md#你对String对象的intern熟悉么) ![](../images/柠檬.png)
-11. [为什么Java不支持运算符重载？](JVM/Java多继承运算符重载.md#为什么Java不支持运算符重载) `@B`![](../images/柠檬.png)
-12. [为什么Java中不支持多重继承？](JVM/Java多继承运算符重载.md#java为什么不支持多继承) `@B`![](../images/柠檬.png)
+8. [为什么 char 数组比 Java 中的 String 更适合存储密码？](JVM/为什么char数组比Java中的String更适合存储密码.md) `@B`![](../images/柠檬.png)
+9. [为什么 String 在 Java 中是不可变的？](JVM/String为什么不可变.md) `@B` ![](../images/柠檬.png)
+10. [你对String对象的intern()熟悉么?](JVM/你对String对象的intern熟悉么.md) ![](../images/柠檬.png)
+11. [为什么Java不支持运算符重载？](JVM/为什么Java不支持运算符重载.md) `@B`![](../images/柠檬.png)
+12. [为什么Java中不支持多重继承？](JVM/Java为什么不支持多继承.md) `@B`![](../images/柠檬.png)
 13. [Java类初始化顺序](JVM/类的初始化流程.md) `@B`![](../images/柠檬.png)
 14. [Java 类的加载流程是怎样的？什么是双亲委派机制？](JVM/类的加载过程双亲委派.md) `@B` ![](../images/柠檬.png)
-15. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？ `@B` ![](../images/柠檬.png)
-16. char 型变量中能不能存贮一个中文汉字，为什么？![](../images/柠檬.png)
-17. java 创建对象的几种方式![](../images/柠檬.png)
-18. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
+15. [如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？](JVM/Serializable类包含一个不可序列化的成员会发生什么.md) `@B` ![](../images/柠檬.png)
+16. [char 型变量中能不能存贮一个中文汉字，为什么？](JVM/char型变量中能不能存贮一个中文汉字.md)![](../images/柠檬.png)
+17. [java 创建对象的几种方式](JVM/java创建对象的几种方式.md)![](../images/柠檬.png)
+18. [ThreadLocal实现原理是什么？](JVM/ThreadLocal实现原理是什么.md)@C![](../images/西瓜.png)
 19. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
 20. CAS 实现原理是什么？@C![](../images/西瓜.png)
 21. 成员变量和方法的区别？@C![](../images/西瓜.png)
