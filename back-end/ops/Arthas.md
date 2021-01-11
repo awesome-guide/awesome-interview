@@ -25,7 +25,7 @@
 
 - [【Arthas问题排查集】活用ognl表达式.md](arthas/[Arthas问题排查集]活用ognl表达式.md)
 
-- [分享及其资料：当DUBBO遇上Arthas - 排查问题的实践](arthas/分享及其资料:当DUBBO遇上Arthas-排查问题的实践.md)
+- [分享及其资料：当DUBBO遇上Arthas - 排查问题的实践](arthas/当DUBBO遇上Arthas排查问题的实践.md)
 
 - [记录一次redisson Bug的排查与修复过程](arthas/记录一次redissonBug的排查与修复过程.md)
 
