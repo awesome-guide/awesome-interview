@@ -91,7 +91,7 @@
 33. 常用的线程池模式以及不同线程池的使用场景？![](../images/樱桃.png)
 34. BlockingQueue的原理是什么![](../images/樱桃.png)
 35. 如何确保N个线程可以访问N个资源同时又不导致死锁？![](../images/樱桃.png)
-36. [有三个线程 T1，T2，T3，怎么确保它们按顺序执行？](多线程&&并发/线程/有三个线程T1,T2,T3,怎么确保它们按顺序执行.md)@A![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
+36. [有三个线程 T1，T2，T3，怎么确保它们按顺序执行？](多线程&&并发/线程/有三个线程T1,T2,T3,怎么确保它们按顺序执行.md)![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
 37. [多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）](多线程&&并发/线程/多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路).md)![](../images/芒果.png)
 38. 如何写代码来解决生产者消费者问题？![](../images/芒果.png)
 39. 你如何确保main()方法所在的线程是Java程序最后结束的线程？![](../images/芒果.png)
