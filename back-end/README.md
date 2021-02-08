@@ -48,7 +48,7 @@
 41. [3*0.1==0.3返回值是什么](基础知识/3乘0.1==0.3返回值是什么.md)![](../images/葡萄.png)
 42. [Object中有哪些公共方法?](基础知识/Object的公共方法.md)![](../images/葡萄.png)
 43. [Error vs Exception的区别](基础知识/Error和Exception.md)![](../images/葡萄.png)
-44. [try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?](JVM/try finally中的return.md)![](../images/葡萄.png)
+44. [try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?](JVM/try-finally中的return.md)![](../images/葡萄.png)
 45. [Java 语言如何进行异常处理，关键字：throws、throw、try、catch、finally 分别如何使用？](基础知识/处理异常和一些关键字的用法.md)![](../images/葡萄.png)
 46. 
 
@@ -95,7 +95,7 @@
 43. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？![](../images/橙子.png)
 44. 如何用Java实现阻塞队列![](../images/橙子.png)
 45. 用Java编程一个会导致死锁的程序，你将怎么解决？![](../images/橙子.png)
-46. [你将如何使用thread dump？你将如何分析Thread dump？](多线程&&并发/线程/如何使用分析Thread dump.md)![](../images/橙子.png)
+46. [你将如何使用thread dump？你将如何分析Thread dump？](多线程&&并发/线程/如何使用分析Thread-dump.md)![](../images/橙子.png)
 47. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？![](../images/橙子.png)
 48. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。![](../images/橙子.png)
 
