@@ -1,10 +1,6 @@
 ## 后端技术栈分享内容参考列表
 
-
-
 [TOC]
-
-
 
 ### 基础知识
 
@@ -13,28 +9,27 @@
 ##### jdk
 
 1. [HashMap 与 ConcurrentHashMap 的实现原理是怎样的？](集合/HashMap.md)[ConcurrentHashMap 是如何保证线程安全的？](集合/CurrentHashMap.md)![](../images/草莓.png)
-2. HashMap底层实现，为什么扩容是2的幂次；为什么是0.75f，1.7与1.8的区别 `@A`![](../images/草莓.png)
-3. hashmap 和 hashtable 的区别是什么？`@A`![](../images/草莓.png)
-4. HashMap 实现原理，为什么使用红黑树？`@A`![](../images/草莓.png)
-5. ArrayList集合加入1万条数据，应该怎么提高效率`@A`![](../images/草莓.png)
-6. 可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决 `@A`![](../images/草莓.png)
-7. 简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度@A![](../images/草莓.png)
-8. [为什么 char 数组比 Java 中的 String 更适合存储密码？](JVM/String为什么不可变.md#为什么char数组比Java中的String更适合存储密码) `@B`![](../images/柠檬.png)
-9. [为什么 String 在 Java 中是不可变的？](JVM/String为什么不可变.md#为什么String在Java中是不可变的) `@B` ![](../images/柠檬.png)
-10. [你对String对象的intern()熟悉么?](JVM/String为什么不可变.md#你对String对象的intern熟悉么) ![](../images/柠檬.png)
-11. [为什么Java不支持运算符重载？](JVM/Java多继承运算符重载.md#为什么Java不支持运算符重载) `@B`![](../images/柠檬.png)
-12. [为什么Java中不支持多重继承？](JVM/Java多继承运算符重载.md#java为什么不支持多继承) `@B`![](../images/柠檬.png)
+2. [HashMap底层实现，为什么扩容是2的幂次](集合/HashMap为什么扩容是2的幂次.md)；[为什么是0.75f](集合/HashMap负载因子为什么是0.75f)，[1.7与1.8的区别](集合/HashMap1.7与1.8的区别.md) `@A`![](../images/草莓.png)
+3. [hashmap 和 hashtable 的区别是什么？](集合/hashmap和hashtable的区别是什么.md)`@A`![](../images/草莓.png)
+4. [HashMap 实现原理，为什么使用红黑树？](集合/HashMap实现原理，为什么使用红黑树.md)`@A`![](../images/草莓.png)
+5. [ArrayList集合加入1万条数据，应该怎么提高效率](集合/ArrayList集合加入1万条数据，应该怎么提高效率.md)`@A`![](../images/草莓.png)
+6. [可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决](集合/可以用for循环直接删除ArrayList的特定元素吗？可能会出现什么问题？怎样解决.md) `@A`![](../images/草莓.png)
+7. [简述 ArrayList 与 LinkedList 的底层实现以及常见操作的时间复杂度](集合/简述ArrayList与LinkedList的底层实现以及常见操作的时间复杂度.md)@A![](../images/草莓.png)
+8. [为什么 char 数组比 Java 中的 String 更适合存储密码？](JVM/为什么char数组比Java中的String更适合存储密码.md) `@B`![](../images/柠檬.png)
+9. [为什么 String 在 Java 中是不可变的？](JVM/String为什么不可变.md) `@B` ![](../images/柠檬.png)
+10. [你对String对象的intern()熟悉么?](JVM/你对String对象的intern熟悉么.md) ![](../images/柠檬.png)
+11. [为什么Java不支持运算符重载？](JVM/为什么Java不支持运算符重载.md) `@B`![](../images/柠檬.png)
+12. [为什么Java中不支持多重继承？](JVM/Java为什么不支持多继承.md) `@B`![](../images/柠檬.png)
 13. [Java类初始化顺序](JVM/类的初始化流程.md) `@B`![](../images/柠檬.png)
 14. [Java 类的加载流程是怎样的？什么是双亲委派机制？](JVM/类的加载过程双亲委派.md) `@B` ![](../images/柠檬.png)
-15. 如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？ `@B` ![](../images/柠檬.png)
-16. char 型变量中能不能存贮一个中文汉字，为什么？![](../images/柠檬.png)
-17. java 创建对象的几种方式![](../images/柠檬.png)
-18. ThreadLocal 实现原理是什么？@C![](../images/西瓜.png)
-19. Java 如何高效进行数组拷贝@C![](../images/西瓜.png)
-20. CAS 实现原理是什么？@C![](../images/西瓜.png)
-21. 成员变量和方法的区别？@C![](../images/西瓜.png)
-22. Java 缓冲流 buffer 的用途和原理是什么？@C![](../images/西瓜.png)
-23. 简述 Java 的 happen before 原则@C![](../images/西瓜.png)
+15. [如果你的Serializable类包含一个不可序列化的成员，会发生什么？你是如何解决的？](JVM/Serializable类包含一个不可序列化的成员会发生什么.md) `@B` ![](../images/柠檬.png)
+16. [char 型变量中能不能存贮一个中文汉字，为什么？](JVM/char型变量中能不能存贮一个中文汉字.md)![](../images/柠檬.png)
+17. [java 创建对象的几种方式](JVM/java创建对象的几种方式.md)![](../images/柠檬.png)
+18. [ThreadLocal实现原理是什么？](JVM/ThreadLocal实现原理是什么.md)@C![](../images/西瓜.png)
+19. [Java 如何高效进行数组拷贝](JVM/Java如何高效进行数组拷贝.md) @C![](../images/西瓜.png)
+20. [CAS 实现原理是什么？](JVM/CAS实现的原理是什么.md) @C![](../images/西瓜.png)
+22. [Java 缓冲流 buffer 的用途和原理是什么？](JVM/Java缓冲流buffer的用途和原理是什么.md) @C![](../images/西瓜.png)
+23. [简述 Java 的 happen before 原则](JVM/简述Java的happenBefore原则.md) @C![](../images/西瓜.png)
 24. final 内存语义？final有哪些用法，什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
 25. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
 26. [Collections.sort和Arrays.sort的实现原理](集合/Collections.sort和Arrays.sort的实现原理.md)@D![](../images/牛油果.png)
@@ -42,12 +37,11 @@
 28. [private修饰的方法可以通过反射访问，那么private的意义是什么](JVM/private修饰的方法可以通过反射访问，那么private的意义是什么.md)@D![](../images/牛油果.png)
 29. [String a = "ab"; String b = "a" + "b"; a == b 是否相等，为什么!](JVM/String字符串问题.md)@D![](../images/牛油果.png)
 30. [short s1=1; s1 = s1 + 1;该段代码是否有错,有的话怎么改？short s1=1; s1 += 1; 该段代码是否有错,有的话怎么改？](JVM/short类型相加.md)@D![](../images/牛油果.png)
-31. int 和Integer谁占用的内存更多? ![](../images/牛油果.png)
 32. [a=a+b与a+=b有什么区别吗?](JVM/a=a+b与a+=b有什么区别吗.md)@D ![](../images/牛油果.png)
 33. [a.hashCode()有什么用?与a.equals(b)有什么关系,equals()和hashcode的区别!](集合/hashCode和equals.md)@D![](../images/牛油果.png)
 34. 局部变量使用前需要显式地赋值，否则编译通过不了，为什么这么设计@E![](../images/葡萄.png)
-36. [int a = 1; 是原子性操作吗](基础知识/int a = 1; 是原子性操作吗.md)@E![](../images/葡萄.png)
-37. [简述 Java的反射机制](简述 Java的反射机制.md)    @E![](../images/葡萄.png)
+36. [int_a=1是原子性操作吗](基础知识/int_a=1是原子性操作吗.md)@E![](../images/葡萄.png)
+37. [简述Java的反射机制](简述Java的反射机制.md)@E![](../images/葡萄.png)
 38. [简述 SortedSet 实现原理](基础知识/简述SortedSet实现原理.md)@E![](../images/葡萄.png)
 39. [简述使用协程的优点](基础知识/简述使用协程的优点.md)@E![](../images/葡萄.png)
 40. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
@@ -64,30 +58,26 @@
 2. [Java 线程间有多少通信方式？](多线程&&并发/线程/3.线程的通信方式)@F![](../images/猕猴桃.png)
 3. 编写两个线程，一个线程打印1~25，另一个线程打印字母A~Z，打印顺序为12A34B56C……5152Z，要求使用线程间的通信。![](../images/猕猴桃.png)
 4. [Java 线程的状态及转换](多线程&&并发/线程/2.java线程的状态及转换.md) ![](../images/猕猴桃.png)
-5. [在线程中你怎么处理异常？](多线程&&并发/线程/在线程中你怎么处理异常.md)![](../images/猕猴桃.png)
+5. [在线程中你怎么处理异常？](多线程&&并发/线程/在线程中你怎么处理异常.md)![](../images/猕猴桃.png)`
 7. [线程中的wait()和sleep()方法有什么区别](多线程&&并发/线程/线程中的wait()和sleep()方法有什么区别.md)![](../images/猕猴桃.png)
 8. [为什么wait, notify和notifyAll这些方法不在thread类里面?](多线程&&并发/线程/为什么wait,notify和notifyAll这些方法不在thread类里面.md)![](../images/猕猴桃.png)
 8. [为什么wait和notify方法要在同步块中调用？](多线程&&并发/线程/为什么wait和notify方法要在同步块中调用.md)![](../images/猕猴桃.png)
 9. [为什么wait()和notify()需要搭配synchonized关键字使用](多线程&&并发/线程/为什么wait()和notify()需要搭配synchonized关键字使用.md)
 10. [讲下join,yield方法的作用,以及什么场合用它们？](多线程&&并发/线程/讲下join,yield方法的作用,以及什么场合用它们.md)![](../images/猕猴桃.png)
 11. [为什么Thread类的sleep()和yield()方法是静态的](多线程&&并发/线程/为什么Thread类的sleep()和yield()方法是静态的.md)？![](../images/猕猴桃.png)
-12. Thread.sleep(0) 到底有什么用？![](../images/猕猴桃.png)
-13. sleep、yield、wait、join的区别🌰
-14. sleep、wait、park、Condition 都能让线程等待，有什么区别？🌰
-15. 为什么Thread里面的大部分方法都是final的？🌰
-16. 多线程同步有哪几种方法？🌰
-17. 如何控制某个方法允许并发访问线程的大小？怎么控制同一时间只有 3 个线程运行？🌰
-18. 什么是原子性、可见性、有序性？🌰
-19. 一个线程运行时发生异常会怎样？🌰
-20. 在线程中你怎么处理不可控制异常🌰
-21. 为什么你应该在循环中检查等待条件？🐡
-22. 多线程中的忙循环是什么?🐡
-23. 线程中断是否能直接调用stop,为什么?🐡
-24. 怎么检测一个线程是否拥有锁？🐡
-25. 不可变对象对多线程有什么帮助？🐡
+12. [Thread.sleep(0) 到底有什么用？](多线程&&并发/线程/Thread.sleep(0)有什么用.md)![](../images/猕猴桃.png)
+13. [sleep、yield、wait、join、park的区别](多线程&&并发/线程/sleep、yield、wait、join的区别.md)🌰
+14. [为什么Thread里面的大部分方法都是final的？](多线程&&并发/线程/为什么Thread里面的大部分方法都是final的.md)🌰
+16. [多线程同步有哪几种方法？](多线程&&并发/线程/多线程同步有哪几种方法.md)🌰
+17. [什么是原子性、可见性、有序性？](多线程&&并发/线程/什么是原子性、可见性、有序性.md)🌰
+19. [一个线程运行时发生异常会怎样？](多线程&&并发/线程/一个线程运行时发生异常会怎样.md)🌰
+20. [在线程中你怎么处理不可控制异常](多线程&&并发/线程/在线程中你怎么处理不可控制异常.md)🌰
+21. [多线程中的忙循环是什么?](多线程&&并发/线程/多线程中的忙循环是什么.md)🐡
+23. [线程中断是否能直接调用stop,为什么?](多线程&&并发/线程/线程中断是否能直接调用stop,为什么.md)🐡
+25. [不可变对象对多线程有什么帮助？](多线程&&并发/线程/不可变对象对多线程有什么帮助.md)🐡
 26. 什么是 FutureTask？@B![](../images/樱桃.png)
 27. 如何在两个线程间共享数据？@B![](../images/樱桃.png)
-28. 多线程里面对一个整型做加减为啥不能用volatile；@B![](../images/樱桃.png)
+28. [多线程里面对一个整型做加减为啥不能用volatile](JVM/多线程里面对一个整型做加减为啥不能用volatile.md) @B![](../images/樱桃.png)
 29. 简述 BIO, NIO, AIO 的区别@B![](../images/樱桃.png)
 30. Java 中 interrupted 和 isInterrupted 方法的区别？@B![](../images/樱桃.png)
 31. CyclicBarrier 和 CountDownLatch 的区别？![](../images/樱桃.png)
@@ -95,8 +85,8 @@
 33. 常用的线程池模式以及不同线程池的使用场景？![](../images/樱桃.png)
 34. BlockingQueue的原理是什么![](../images/樱桃.png)
 35. 如何确保N个线程可以访问N个资源同时又不导致死锁？![](../images/樱桃.png)
-36. 有三个线程 T1，T2，T3，怎么确保它们按顺序执行？@A![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
-37. 多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）![](../images/芒果.png)
+36. [有三个线程 T1，T2，T3，怎么确保它们按顺序执行？](多线程&&并发/线程/有三个线程T1,T2,T3,怎么确保它们按顺序执行.md)![img](file:///Users/zhangbo/Documents/workspace/awesome-interview/images/%E8%8A%92%E6%9E%9C.png?lastModify=1605700951)
+37. [多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路)（应该有5种）](多线程&&并发/线程/多线程交替打印ABC10次的多种实现方法(请给出至少四种实现思路).md)![](../images/芒果.png)
 38. 如何写代码来解决生产者消费者问题？![](../images/芒果.png)
 39. 你如何确保main()方法所在的线程是Java程序最后结束的线程？![](../images/芒果.png)
 40. 同步方法和同步块，哪个是更好的选择？![](../images/芒果.png)
@@ -157,67 +147,60 @@
 ##### JVM
 
 1. JVM 中内存模型是怎样的，简述新生代与老年代的区别？新生代有哪些区，作用是什么？🌛
-
 2. 如何判断对象是否可以被回收（1引用计数2可达性分析）🌛
-
 3. JVM常用垃圾回收算法，讲一下CMS原理🌛
-
 4. Java 中垃圾回收机制中如何判断对象需要回收？常见的 GC 回收算法有哪些？🌛
-
 5. JVM 是怎么去调优的？简述过程和调优的结果🌛
-
 6. 如何监控 GC✨
-
 7. 常见 OutOfMemoryError 有哪些✨
-
 8. 常见的 JDK 诊断命令有哪些，应用场景？✨
-
 9. CPU 较高，如何定位问题✨
-
 10. 内存占用较高，如何定位大对象✨
-
 11. 内存泄漏时，如何实时跟踪内存变化情况✨
-
 12. 内存泄漏时，如何定位问题代码✨
-
 13. 大型项目如何进行性能瓶颈调优？🌲
-
 14. 字节码是如何在 JVM 中进行流转的（栈帧）🌲
-
 15. 方法调用的底层实现🌲
-
 16. 方法重写和重载的实现过程🌲
-
 17. invokedynamic 指令实现🌲
-
 18. 如何修改字节码📚
-
 19. JIT 参数配置如何影响程序运行？📚
-
 20. 虚拟机有哪些性能优化策略📚
+21. JVM收集器G1的内存模型和CMS的内存模型有什么不同？📚
+22. 对方法区和永久区的理解以及它们之间的关系📚📚
+24. CMS和G1的异同
+25. G1 什么时候引发FullGC
+26. 说一个最熟悉的垃圾回收算法
+27. 吞吐量优先和响应优先的回收器有哪些
+28. 怎么判定内存泄露
+29. 讲一下CMS的流程
+30. 为什么压缩指针超过32G失效
+31. 什么是内存泄露？GC调优有经验吗？一般GC问题怎么解决？
+32. ThreadLocal有没有内存泄露问题？
+33. G1两个Region 不是连续的，而且之间有可达的引用。我现在想回收一个，另一个怎么处理？
+34. 讲一下JVM堆内存管理（对象分配过程）
+35. 听说过CMS并发预处理和并发可中段预处理吗
+36. 到底多大的对象会被直接扔进老年代
 
-21.  JVM收集器G1的内存模型和CMS的内存模型有什么不同？📚
-
-22. 对方法区和永久区的理解以及它们之间的关系📚
-
-23. Java 故障排查方式有哪些，如何排故查的📚
-
-    
 
 
+#### 问题解决
+
+- [Java故障排查方式有哪些如何排故查的](ops/Java故障排查.md)
+- [Arthas是什么，如何使用Arthas排查线上问题，常用命令有哪些,举例说明一下](ops/Arthas.md)
 
 #### 算法
 
-- ▲ 29 10亿个数中如何高效地找到最大的一个数以及最大的第 K 个数
-- ▲ 21 最大子序和 (Leetcode)
-- ▲ 20 爬楼梯 (Leetcode)
-- ▲ 18 用 Rand7() 实现 Rand10() (Leetcode)
-- ▲ 15 AVL 树和红黑树有什么区别？
-- ▲ 15 给定一个包含 40亿 个无符号整数的大型文件，使用最多 1G 内存，对此文件进行排序
-- ▲ 14 合并两个有序链表 (Leetcode)
-- ▲ 14 路径总和 (Leetcode)
-- ▲ 14 如果通过一个不均匀的硬币得到公平的结果？
-- ▲ 13 实现快速排序
+- ▲  [10亿个数中如何高效地找到最大的一个数以及最大的第 K 个数](算法/10亿个数中如何高效地找到最大的一个数以及最大的第K个数.md)
+- ▲ 最大子序和 (Leetcode)
+- ▲ 爬楼梯 (Leetcode)
+- ▲ 用 Rand7() 实现 Rand10() (Leetcode)
+- ▲ AVL 树和红黑树有什么区别？
+- ▲ 给定一个包含 40亿 个无符号整数的大型文件，使用最多 1G 内存，对此文件进行排序
+- ▲ 合并两个有序链表 (Leetcode)
+- ▲ 路径总和 (Leetcode)
+- ▲ 如果通过一个不均匀的硬币得到公平的结果？
+- ▲ 实现快速排序
 - ▲ 13 数组中的第 K 个最大元素 (Leetcode)
 - ▲ 13 10亿条数据包括 id，上线时间，下线时间，请绘制每一秒在线人数的曲线图
 - ▲ 13 删除排序链表中的重复元素 (Leetcode)
@@ -316,6 +299,8 @@
 6. 集群如何同步会话状态
 7. 什么情况会出现雪崩，以及如何应对？
 8. AOP和IOC原理
+9.  [OAuth2.0 是什么？有几种方式？](OAuth2.0 是什么？有几种方式？.md)
+10.  SSO是什么？与OAuth2.0的关系
 
 #### 高并发系统
 
