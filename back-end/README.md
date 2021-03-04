@@ -30,7 +30,7 @@
 20. [CAS 实现原理是什么？](JVM/CAS实现的原理是什么.md) @C![](../images/西瓜.png)
 22. [Java 缓冲流 buffer 的用途和原理是什么？](JVM/Java缓冲流buffer的用途和原理是什么.md) @C![](../images/西瓜.png)
 23. [简述 Java 的 happen before 原则](JVM/简述Java的happenBefore原则.md) @C![](../images/西瓜.png)
-24. final 内存语义？final有哪些用法，什么时候用，使用时需要考虑的问题@D![](../images/牛油果.png)
+24. [final 内存语义？final有哪些用法，什么时候用，使用时需要考虑的问题](JVM/final的用法.md)@D![](../images/牛油果.png)
 25. 原子操作类底层实现机制？自增操作是怎么保证原子性的？@D![](../images/牛油果.png)
 26. [Collections.sort和Arrays.sort的实现原理](集合/Collections.sort和Arrays.sort的实现原理.md)@D![](../images/牛油果.png)
 27. [poll()方法和 remove()方法的区别？](集合/poll()方法和remove()方法的区别.md)@D![](../images/牛油果.png)
@@ -44,12 +44,12 @@
 37. [简述Java的反射机制](简述Java的反射机制.md)@E![](../images/葡萄.png)
 38. [简述 SortedSet 实现原理](基础知识/简述SortedSet实现原理.md)@E![](../images/葡萄.png)
 39. [简述使用协程的优点](基础知识/简述使用协程的优点.md)@E![](../images/葡萄.png)
-40. 如何判断一个 Hash 函数好不好？![](../images/葡萄.png)
-41. 3*0.1==0.3返回值是什么![](../images/葡萄.png)
-42. Object中有哪些公共方法?![](../images/葡萄.png)
-43. Error vs Exception的区别![](../images/葡萄.png)
-44. try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?![](../images/葡萄.png)
-45. Java 语言如何进行异常处理，关键字：throws、throw、try、catch、finally 分别如何使用？![](../images/葡萄.png)
+40. [如何判断一个 Hash 函数好不好？](基础知识/如何判断一个hash函数的好坏.md)![](../images/葡萄.png)
+41. [3*0.1==0.3返回值是什么](基础知识/3乘0.1==0.3返回值是什么.md)![](../images/葡萄.png)
+42. [Object中有哪些公共方法?](基础知识/Object的公共方法.md)![](../images/葡萄.png)
+43. [Error vs Exception的区别](基础知识/Error和Exception.md)![](../images/葡萄.png)
+44. [try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后?](JVM/try-finally中的return.md)![](../images/葡萄.png)
+45. [Java 语言如何进行异常处理，关键字：throws、throw、try、catch、finally 分别如何使用？](基础知识/处理异常和一些关键字的用法.md)![](../images/葡萄.png)
 46. 
 
 ##### Thread
@@ -92,12 +92,12 @@
 40. 同步方法和同步块，哪个是更好的选择？![](../images/芒果.png)
 41. 数组A内容为 1,2,3,4...52 ,数组B内容为26个英文字母，使用两个线程分别输入两个数组，打印内容为：12a34b56c78e....... 这样的规律![](../images/芒果.png)
 42. 列举出一般情况下线程中断的几种方式,并说明他们之间的优缺点,并且说明那种中断方式最好![](../images/芒果.png)
-43. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？🍈
-44. 如何用Java实现阻塞队列🍈
-45. 用Java编程一个会导致死锁的程序，你将怎么解决？🍈
-46. 你将如何使用thread dump？你将如何分析Thread dump？🍈
-47. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？🍈
-48. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。🍈
+43. 在Java中Lock接口比synchronized块的优势是什么？你需要实现一个高效的缓存，它允许多个用户读，但只允许一个用户写，以此来保持它的完整性，你会怎样去实现它？![](../images/橙子.png)
+44. 如何用Java实现阻塞队列![](../images/橙子.png)
+45. 用Java编程一个会导致死锁的程序，你将怎么解决？![](../images/橙子.png)
+46. [你将如何使用thread dump？你将如何分析Thread dump？](多线程&&并发/线程/如何使用分析Thread-dump.md)![](../images/橙子.png)
+47. 你在多线程环境中遇到的常见的问题是什么？你是怎么解决它的？![](../images/橙子.png)
+48. 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。![](../images/橙子.png)
 
 ##### Lock
 
