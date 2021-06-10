@@ -16,7 +16,7 @@
 
 第 2 题：['1', '2', '3'].map(parseInt) what & why ?
 
-解析：[2 题](./shareAnswer/数组.map(parseInt)-what&why.md)
+解析：[2 题](<./shareAnswer/数组.map(parseInt)-what&why.md>)
 
 第 3 题：什么是防抖和节流？有什么区别？如何实现？
 
@@ -34,9 +34,9 @@
 
 第 8 题：setTimeout、Promise、Async/Await 的区别
 
-第 9 题：Async/Await 如何通过同步的方式实现异步
+第 9 题：异步笔试题
 
-第 10 题：异步笔试题
+第 10 题：Async/Await 如何通过同步的方式实现异步
 
 第 11 题：算法手写题
 
